@@ -1,5 +1,33 @@
 [
   {
+    "id": "m27c1001",
+    "title": "M27C1001",
+    "publisher": "SGS-THOMSON",
+    "manufacturers": ["STMicroelectronics", "SGS-THOMSON"],
+    "models": ["M27C1001-15XF1"],
+    "revision": "Август 1990",
+    "file": "m27c1001-e4126c63f2ad.pdf",
+    "size": 1951052,
+    "sha256": "e4126c63f2ad4599e94ba959d55c7002b5bebdf7ad7d228aad679d827d2fd7bd",
+    "pages": 11,
+    "sourceUrl": "https://datasheets.pl/elementy_czynne/IC/M/M27C1001-3.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "intel-27c020",
+    "title": "27C020",
+    "publisher": "Intel",
+    "manufacturers": ["Intel"],
+    "models": ["D27C020-150V10"],
+    "revision": "290226-003, сентябрь 1990, Preliminary",
+    "file": "intel-27c020-2194b0f5a338.pdf",
+    "size": 326102,
+    "sha256": "2194b0f5a33849abb2c5ecb159f42fee29b965bd6d7724f602c70bdfb140b42b",
+    "pages": 10,
+    "sourceUrl": "https://www.ardent-tool.com/datasheets/Intel_27C020.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "nmc27c256",
     "title": "NMC27C256",
     "publisher": "National Semiconductor",
@@ -139,7 +167,8 @@
       "STMicroelectronics"
     ],
     "models": [
-      "M27C4001-15F1"
+      "M27C4001-15F1",
+      "M27C4001-10F1"
     ],
     "revision": "Rev. 4, март 2006",
     "file": "m27c4001-a197b1dce87a.pdf",

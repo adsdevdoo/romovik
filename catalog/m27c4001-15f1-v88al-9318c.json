@@ -34,10 +34,26 @@
     }
   ],
   "strings": [
-    { "offset": 294497, "encoding": "ASCII", "text": "#ifdef NEFA_TOUCH" },
-    { "offset": 369514, "encoding": "ASCII", "text": "* Jupiter Race -> Spielname" },
-    { "offset": 369588, "encoding": "ASCII", "text": "* kein AMATIC-Schriftzug sichtbar" },
-    { "offset": 452698, "encoding": "ASCII", "text": "(c) by G.Bammer" }
+    {
+      "offset": 294497,
+      "encoding": "ASCII",
+      "text": "#ifdef NEFA_TOUCH"
+    },
+    {
+      "offset": 369514,
+      "encoding": "ASCII",
+      "text": "* Jupiter Race -> Spielname"
+    },
+    {
+      "offset": 369588,
+      "encoding": "ASCII",
+      "text": "* kein AMATIC-Schriftzug sichtbar"
+    },
+    {
+      "offset": 452698,
+      "encoding": "ASCII",
+      "text": "(c) by G.Bammer"
+    }
   ],
   "stringsReviewed": true
 }

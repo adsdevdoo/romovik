@@ -1,0 +1,38 @@
+{
+  "sequence": 13,
+  "id": "d27c020-150v10-u2180488",
+  "chip": "D27C020-150V10",
+  "manufacturer": "Intel",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "D27C020 / -150V10 / U2180488 / © '86 '89",
+  "description": "Считано с Intel D27C020-150V10 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "27C020 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "27C020@DIP32.BIN",
+    "size": 262144,
+    "sha256": "09033b3dc6fc8ce9fe4327ea7c7dcf1e0e475689c0d3079c46b5e6ab8ea43b7a"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "D27C020-150V10 — фотография 1",
+      "size": 1590946,
+      "sha256": "5ccf6cc590fc85c3cb012aa6a8e152d766f81cb8e4521b6a1434c9b82433ece4"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

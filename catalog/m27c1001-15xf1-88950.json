@@ -1,0 +1,38 @@
+{
+  "sequence": 15,
+  "id": "m27c1001-15xf1-88950",
+  "chip": "M27C1001-15XF1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "88950 / M27C1001 / -15XF1",
+  "description": "Считано с STMicroelectronics M27C1001-15XF1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C1001 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C1001@DIP32.BIN",
+    "size": 131072,
+    "sha256": "d155cc5cfbc1bf976f6eebcf2f4ad4916ffc6512e5fed110d2971296619d7941"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C1001-15XF1 — фотография 1",
+      "size": 1536580,
+      "sha256": "40b7b041aebe426f7f7ee4c8f746bd80be4ade7fe38fa76faddb030edd950ee7"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

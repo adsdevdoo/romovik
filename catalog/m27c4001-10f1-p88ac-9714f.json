@@ -1,0 +1,50 @@
+{
+  "sequence": 14,
+  "id": "m27c4001-10f1-p88ac-9714f",
+  "chip": "M27C4001-10F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "M27C4001 / -10F1 / P88AC / 9714F / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4001-10F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4001 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4001@DIP32-3.BIN",
+    "size": 524288,
+    "sha256": "6166135fd068b938c0dfb697493f046b6274b8f2ecf3d4b7741730b3b644597d"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4001-10F1 — фотография 1",
+      "size": 1643348,
+      "sha256": "61d5083d03c6f39e438335e98068145da09b65e0beb5c1c685a1901de2a1c48b"
+    }
+  ],
+  "strings": [
+    { "offset": 324116, "encoding": "ASCII", "text": "UNIDESA" },
+    { "offset": 324337, "encoding": "ASCII", "text": "Reset Factory?" },
+    { "offset": 334081, "encoding": "ASCII", "text": "FORTUNA" },
+    { "offset": 334803, "encoding": "ASCII", "text": "AUGURI" },
+    { "offset": 335491, "encoding": "ASCII", "text": "Jugadas" },
+    { "offset": 416602, "encoding": "ASCII", "text": "Germany_DMT" },
+    { "offset": 417568, "encoding": "ASCII", "text": "Eslovaquia" },
+    { "offset": 418192, "encoding": "ASCII", "text": "Italia_2GM" },
+    { "offset": 420932, "encoding": "ASCII", "text": "Internacional" },
+    { "offset": 424832, "encoding": "ASCII", "text": "eL6_MMPAN" },
+    { "offset": 424931, "encoding": "ASCII", "text": "eL6_MMPAN_1" }
+  ],
+  "stringsReviewed": true
+}

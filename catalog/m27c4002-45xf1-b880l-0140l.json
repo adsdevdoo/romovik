@@ -34,9 +34,21 @@
     }
   ],
   "strings": [
-    { "offset": 524240, "encoding": "ASCII", "text": "PKWILD_V111.BIN" },
-    { "offset": 524259, "encoding": "ASCII", "text": "2004-05-18" },
-    { "offset": 524276, "encoding": "ASCII", "text": "09:28:34" }
+    {
+      "offset": 524240,
+      "encoding": "ASCII",
+      "text": "PKWILD_V111.BIN"
+    },
+    {
+      "offset": 524259,
+      "encoding": "ASCII",
+      "text": "2004-05-18"
+    },
+    {
+      "offset": 524276,
+      "encoding": "ASCII",
+      "text": "09:28:34"
+    }
   ],
   "stringsReviewed": true
 }

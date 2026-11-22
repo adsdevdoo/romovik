@@ -1,0 +1,38 @@
+{
+  "sequence": 10,
+  "id": "am27c010-200dc-003xwes",
+  "chip": "AM27C010-200DC",
+  "manufacturer": "AMD (Advanced Micro Devices)",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "AM27C010 / -200DC / 12.5V PGM / 003XWES",
+  "description": "ПЗУ AMD AM27C010-200DC, 131072 байта. На фотографии видны логотип AMD и маркировка AM27C010 / -200DC / 12.5V PGM / 003XWES. Микросхема установлена в программатор T56. Устройство и плата происхождения неизвестны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "AM27C010 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "При просмотре ASCII-строк содержательных названий и версий не найдено. Результат Check ID, сравнение повторных чтений и работа в устройстве не сообщены.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "AM27C010@DIP32.BIN",
+    "size": 131072,
+    "sha256": "129966f8464fb6310f3551c93e25614dee22e4d3488a623e20c43dc915478fab"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "AMD AM27C010-200DC, 12.5V PGM / 003XWES в программаторе T56",
+      "size": 1683005,
+      "sha256": "0edca329595a12db0a5cab83cf94cc6cbe6cb89c2ff69872fc1a255bb4e17d63"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

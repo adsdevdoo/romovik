@@ -1,0 +1,38 @@
+{
+  "sequence": 29,
+  "id": "ibm-27c4096-10-811",
+  "chip": "27C4096-10",
+  "manufacturer": "IBM",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "IBM / перед 27C4096-10 неразборчивы 1–2 символа / 811",
+  "description": "На корпусе читаются IBM, 27C4096-10 и 811. Перед обозначением 27C4096-10 видны, но неразборчивы один или два символа; точное обозначение не установлено. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "IBM27C4096@DIP40.BIN",
+    "size": 524288,
+    "sha256": "b400b7b9f9f07e9eb4e8d7e943d2c08e65eee4d251405f0c89a93c41f7371c11"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "IBM 27C4096-10 с неразборчивым префиксом — фотография 1",
+      "size": 1164878,
+      "sha256": "55004c8133b2c509c8a6aef9a1db3c723978cbed1b525922db1293c0bdf531a9"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

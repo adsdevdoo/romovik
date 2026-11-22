@@ -1,0 +1,120 @@
+{
+  "id": "m27c256b-15f1-bhha",
+  "chip": "M27C256B-15F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "M27C256B / -15F1 / BHHA; нижний код неразборчив",
+  "description": "ПЗУ STMicroelectronics M27C256B-15F1. На фотографии видны маркировка модели, код BHHA и логотип ST. Передан отдельный экземпляр с файлом M27C256B@DIP28-2.BIN. Устройство и плата происхождения неизвестны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C256B @DIP28",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "Внутри найдены MULTICLUB 750 RUSSIA, названия диагностических тестов, CASHBOX, BANKNOTE, PRINTER и TICKET. Конкретное устройство не установлено. Содержимое отличается от первого M27C256B@DIP28.BIN. Результат Check ID, сравнение повторных чтений и работа в устройстве не сообщены.",
+  "tags": [
+    "MULTICLUB 750 RUSSIA"
+  ],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C256B@DIP28-2.BIN",
+    "size": 32768,
+    "sha256": "a0749832f95ad103c64bbefe6e6cbaf3f59b437082d1852e2c710a3b1893b8c2"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C256B-15F1 — фотография 1",
+      "size": 1415011,
+      "sha256": "e45838179c3c5266110783e88dce4b90ca7648ff93425e5a2b500218207aac0c"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 29249,
+      "encoding": "ASCII",
+      "text": "MULTICLUB 750 RUSSIA"
+    },
+    {
+      "offset": 1172,
+      "encoding": "ASCII",
+      "text": "TOT EMPTY"
+    },
+    {
+      "offset": 1216,
+      "encoding": "ASCII",
+      "text": "TOT PLAY"
+    },
+    {
+      "offset": 1238,
+      "encoding": "ASCII",
+      "text": "CASHBOX"
+    },
+    {
+      "offset": 9945,
+      "encoding": "ASCII",
+      "text": "LAMP      TEST"
+    },
+    {
+      "offset": 9966,
+      "encoding": "ASCII",
+      "text": "METER     TEST"
+    },
+    {
+      "offset": 9987,
+      "encoding": "ASCII",
+      "text": "REEL      TEST"
+    },
+    {
+      "offset": 10007,
+      "encoding": "ASCII",
+      "text": "DISPLAY    TEST"
+    },
+    {
+      "offset": 10029,
+      "encoding": "ASCII",
+      "text": "DIL       TEST"
+    },
+    {
+      "offset": 10049,
+      "encoding": "ASCII",
+      "text": "SWITCH     TEST"
+    },
+    {
+      "offset": 10071,
+      "encoding": "ASCII",
+      "text": "SLIDE     TEST"
+    },
+    {
+      "offset": 10113,
+      "encoding": "ASCII",
+      "text": "SOUND     TEST"
+    },
+    {
+      "offset": 11970,
+      "encoding": "ASCII",
+      "text": "CLEAR     CODES  ?"
+    },
+    {
+      "offset": 27602,
+      "encoding": "ASCII",
+      "text": "BANKNOTE"
+    },
+    {
+      "offset": 27624,
+      "encoding": "ASCII",
+      "text": "PRINTER"
+    },
+    {
+      "offset": 27635,
+      "encoding": "ASCII",
+      "text": "TICKET"
+    }
+  ],
+  "stringsReviewed": true
+}

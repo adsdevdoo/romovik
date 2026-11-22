@@ -4,7 +4,7 @@
     "title": "M27C4002",
     "publisher": "STMicroelectronics",
     "manufacturers": ["STMicroelectronics"],
-    "models": ["M27C4002-15F1", "M27C4002-45XF1"],
+    "models": ["M27C4002-15F1", "M27C4002-45XF1", "M27C4002-10F1"],
     "revision": "Август 2001",
     "file": "m27c4002-9d7fbee60ccc.pdf",
     "size": 191515,

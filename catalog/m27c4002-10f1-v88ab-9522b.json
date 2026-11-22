@@ -1,0 +1,38 @@
+{
+  "sequence": 24,
+  "id": "m27c4002-10f1-v88ab-9522b",
+  "chip": "M27C4002-10F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "M27C4002 / -10F1 / V88AB / 9522B / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4002-10F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4002 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "При анализе с перестановкой соседних байтов в 16-битных словах в блоке 0x21A58 читается фрагмент «IMPERA INTERNAT_3.0». Это находка в содержимом, а не подтверждение модели устройства. Исходный файл для скачивания не изменён.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4002@DIP40-3.BIN",
+    "size": 524288,
+    "sha256": "aaee0dfdd91593566b896c21f01200d1e8c920cd55b9e0acff900aad381af4e6"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4002-10F1 — фотография 1",
+      "size": 1430195,
+      "sha256": "1981ce57e7fd65031258e7cc258c6f96ca8d1b06dcc27c060f5047fbd0ef5d2d"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

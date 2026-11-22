@@ -1,0 +1,38 @@
+{
+  "sequence": 20,
+  "id": "tms27c040-15-lap9418481",
+  "chip": "TMS27C040-15",
+  "manufacturer": "Texas Instruments",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "TMS JL / 27C040-15 / LAP9418481 / SINGAPORE",
+  "description": "Считано с Texas Instruments TMS27C040-15 на программаторе XGecu T56. Код LAP9418481 уточнён владельцем. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "TMS27C040 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "TMS27C040@DIP32-2.BIN",
+    "size": 524288,
+    "sha256": "4898195ddafb627efc45fd35b4d84ecbf51a399b606b045c8c834c1b41d33944"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "TMS27C040-15 — фотография 1",
+      "size": 1453623,
+      "sha256": "365e193f580aac6fbb50c592446ce881ee35d8331ccf784468b68ddf668c7455"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

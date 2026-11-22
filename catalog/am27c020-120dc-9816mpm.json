@@ -1,0 +1,38 @@
+{
+  "sequence": 21,
+  "id": "am27c020-120dc-9816mpm",
+  "chip": "AM27C020-120DC",
+  "manufacturer": "AMD (Advanced Micro Devices)",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "MALAYSIA / AM27C020 / -120DC / 9816MPM / © 1997 AMD",
+  "description": "Считано с AMD AM27C020-120DC на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "AM27C020 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "AM27C020@DIP32.BIN",
+    "size": 262144,
+    "sha256": "492585c4661b634ace1a2c011e94e6367a08689c92fc064516138e4ee6d24ee9"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "AM27C020-120DC — фотография 1",
+      "size": 1326838,
+      "sha256": "853a9010e25c031662b767f2375edf4434d28f17e0ce108cdf333e1a02eb0e63"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

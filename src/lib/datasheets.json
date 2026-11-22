@@ -1,5 +1,19 @@
 [
   {
+    "id": "am27c020",
+    "title": "Am27C020",
+    "publisher": "AMD (Advanced Micro Devices)",
+    "manufacturers": ["AMD (Advanced Micro Devices)"],
+    "models": ["AM27C020-120DC"],
+    "revision": "11507 Rev. F, май 1995",
+    "file": "am27c020-c5aa267094b8.pdf",
+    "size": 90782,
+    "sha256": "c5aa267094b84afef5c923c1fcbeca4d4c4e7dd0c02f77c51ba95cc98b03e88b",
+    "pages": 12,
+    "sourceUrl": "https://web.stanford.edu/class/ee183/datasheets/27c020.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "tms27c010a",
     "title": "TMS27C010A / TMS27PC010A",
     "publisher": "Texas Instruments",

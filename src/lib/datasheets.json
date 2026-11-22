@@ -1,10 +1,24 @@
 [
   {
+    "id": "tms27c010a",
+    "title": "TMS27C010A / TMS27PC010A",
+    "publisher": "Texas Instruments",
+    "manufacturers": ["Texas Instruments"],
+    "models": ["TMS27C010A-12"],
+    "revision": "SMLS110C, сентябрь 1997",
+    "file": "tms27c010a-3a07e66b1137.pdf",
+    "size": 200370,
+    "sha256": "3a07e66b11379e25c4f6c2ee5286fd7203f92e7ab5145b9c02c53a47679d6cdc",
+    "pages": 13,
+    "sourceUrl": "https://www.muekra.de/user/related_files/tms-27c010a_datasheet.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "tms27c040",
     "title": "TMS27C040",
     "publisher": "Texas Instruments",
     "manufacturers": ["Texas Instruments"],
-    "models": ["TMS27C040-15JL"],
+    "models": ["TMS27C040-15"],
     "revision": "SMLS040F, сентябрь 1997",
     "file": "tms27c040-7672188fc126.pdf",
     "size": 192279,

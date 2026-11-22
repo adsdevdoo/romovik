@@ -1,0 +1,42 @@
+{
+  "sequence": 19,
+  "id": "tms27c010a-12-lup93491",
+  "chip": "TMS27C010A-12",
+  "manufacturer": "Texas Instruments",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "TMS / 27C010A-12 / LUP93491 / SINGAPORE",
+  "description": "Считано с Texas Instruments TMS27C010A-12 на программаторе XGecu T56. Маркировка уточнена владельцем. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "TMS27C010A @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "TMS27C010A@DIP32.BIN",
+    "size": 131072,
+    "sha256": "6866346280a74fe737ea85af56e46664755e47aea00eaa559a49519381ee3e01"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "TMS27C010A-12 — фотография 1",
+      "size": 1475244,
+      "sha256": "78a5ce71068b98103e6c0077a8ead664935618bf0ba5f3a518ef9bdeee2a5f11"
+    }
+  ],
+  "strings": [
+    { "offset": 58296, "encoding": "ASCII", "text": "SUMCHECK ERROR 2" },
+    { "offset": 59340, "encoding": "ASCII", "text": "PROM A" },
+    { "offset": 65504, "encoding": "ASCII", "text": "ADDERPR6495V5" }
+  ],
+  "stringsReviewed": true
+}

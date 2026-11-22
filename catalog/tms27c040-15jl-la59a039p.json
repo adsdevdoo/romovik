@@ -1,12 +1,12 @@
 {
   "sequence": 18,
   "id": "tms27c040-15jl-la59a039p",
-  "chip": "TMS27C040-15JL",
+  "chip": "TMS27C040-15",
   "manufacturer": "Texas Instruments",
   "type": "EPROM",
   "package": "DIP-32, керамический корпус с окном",
   "label": "TMS JL / 27C040-15 / LA59A039P / SINGAPORE",
-  "description": "Считано с Texas Instruments TMS27C040-15JL на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "description": "Считано с Texas Instruments TMS27C040-15 на программаторе XGecu T56. Отдельная надпись JL сохранена в маркировке корпуса. Происхождение устройства неизвестно.",
   "device": "",
   "board": "",
   "origin": "unknown",
@@ -28,7 +28,7 @@
   "photos": [
     {
       "file": "photo-1.png",
-      "alt": "TMS27C040-15JL — фотография 1",
+      "alt": "TMS27C040-15 — фотография 1",
       "size": 1574083,
       "sha256": "562898f2717ccc29af0a8ba1cc50c4540b88f603f4210a9c85a760752eea8cf9"
     }

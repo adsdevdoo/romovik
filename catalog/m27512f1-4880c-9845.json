@@ -1,0 +1,38 @@
+{
+  "sequence": 9,
+  "id": "m27512f1-4880c-9845",
+  "chip": "M27512F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "M27512F1 / 4880C / 9845 / SINGAPORE",
+  "description": "ПЗУ STMicroelectronics M27512F1, 65536 байт. На корпусе видны логотип ST и коды 4880C / 9845 / SINGAPORE; последний символ модели уточнён владельцем как цифра 1. Исходный файл передан под именем M27C512@DIP28.BIN. Устройство и плата происхождения неизвестны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C512 @DIP28",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "По документации ST, M27512 — NMOS EPROM объёмом 512 Кбит (64 КиБ). Суффикс F обозначает керамический корпус с окном, 1 — температурный диапазон 0…70 °C. Маркировка корпуса M27512F1 отличается от имени профиля M27C512 в исходном файле. При просмотре ASCII-строк содержательных названий и версий не найдено. Результат Check ID, сравнение повторных чтений и работа в устройстве не сообщены.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C512@DIP28.BIN",
+    "size": 65536,
+    "sha256": "40c2ab4f26aeda63ab40ac09ac83f757d0a66fc05e5f1e243573aa56fcaa1435"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "STMicroelectronics M27512F1, 4880C / 9845 / SINGAPORE в программаторе T56",
+      "size": 1237474,
+      "sha256": "2d6668b63ca0e5fd0316a820eaa48a771bffca9aae2b97b0f7ec41571e7a0339"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

@@ -1,0 +1,38 @@
+{
+  "sequence": 31,
+  "id": "m27c160-100f1-96007",
+  "chip": "M27C160-100F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-42, керамический корпус с окном",
+  "label": "M27C160 / 100F1 M / 96007 V5 / MYS 88 604",
+  "description": "Отдельный экземпляр 3; происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C160 @DIP42",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C160@DIP42-3.BIN",
+    "size": 2097152,
+    "sha256": "f216ed19f710f296e935e82d06b05141dc3562ad393085a3a5fadad6f8ab1c52"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C160-100F1, маркировка 96007 V5",
+      "size": 1589321,
+      "sha256": "1b9b0dbb4c8b06e0bb4297e7f81ef8c27e098a718292a466e699aedee74c819d"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

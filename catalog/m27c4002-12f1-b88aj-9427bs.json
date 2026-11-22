@@ -1,0 +1,54 @@
+{
+  "sequence": 25,
+  "id": "m27c4002-12f1-b88aj-9427bs",
+  "chip": "M27C4002-12F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "M27C4002-12F1 / B88AJ / 9427BS / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4002-12F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4002 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4002@DIP40-4.BIN",
+    "size": 524288,
+    "sha256": "5b7f2afb2eda70c9691be16bab82ae9b2c1ba650ea8afb1a962c0a62e2fc0cfb"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4002-12F1 — фотография 1",
+      "size": 1431920,
+      "sha256": "234c92aca700bec67a95b2238d7de11752855938f276cba0990a233e28e4acd6"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 524224,
+      "encoding": "ASCII",
+      "text": "DIAMOND_V117.BIN"
+    },
+    {
+      "offset": 524259,
+      "encoding": "ASCII",
+      "text": "2004-10-06"
+    },
+    {
+      "offset": 524276,
+      "encoding": "ASCII",
+      "text": "15:39:55"
+    }
+  ],
+  "stringsReviewed": true
+}

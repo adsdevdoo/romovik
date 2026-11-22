@@ -5,6 +5,10 @@ import { ROOT, loadCatalog, sha256 } from '../src/lib/catalog.mjs';
 
 const records = await loadCatalog();
 const dist = path.join(ROOT, 'dist');
+const indexHtml = await readFile(path.join(dist, 'index.html'), 'utf8');
+assert.deepEqual([...indexHtml.matchAll(/data-sequence="(\d+)"/g)].map(match => Number(match[1])), records.map(record => record.sequence), 'Главная должна сохранять порядок добавления');
+assert.ok(!indexHtml.includes('id="sort"'), 'Выбор другой сортировки запрещён');
+for (const record of records) if (record.dump.originalFilename) assert.ok(indexHtml.includes(record.dump.originalFilename), 'Исходное имя должно быть видно в списке');
 const paths = ['index.html', 'about/index.html', '404.html', ...records.map(record => `rom/${record.id}/index.html`)];
 let links = 0;
 for (const pathname of paths) {

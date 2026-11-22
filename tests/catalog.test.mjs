@@ -71,3 +71,19 @@ test('search includes extracted signatures and UTF-8 descriptions', async t => {
   record.strings = [{ text: 'IMATIC 95', offset: 4, encoding: 'ASCII' }];
   assert.match(searchText(record), /imatic 95/); assert.match(searchText(record), /счетчик/);
 });
+
+test('catalog keeps permanent insertion order across same-day imports and edits', async t => {
+  const f = await fixture(t);
+  const first = (await importDump({ ...f.options, id: 'z-first' }, f.root)).record;
+  const second = (await importDump({ ...f.options, id: 'a-second' }, f.root)).record;
+  assert.equal(first.sequence, 1); assert.equal(second.sequence, 2);
+  first.chip = 'Updated marking'; first.dateAdded = '2020-01-01';
+  await writeFile(path.join(f.root, 'catalog', 'z-first.json'), JSON.stringify(first));
+  assert.deepEqual((await loadCatalog(f.root)).map(r => r.id), ['z-first', 'a-second']);
+  const third = (await importDump({ ...f.options, id: 'm-third', date: '2019-01-01' }, f.root)).record;
+  assert.equal(third.sequence, 3);
+  assert.deepEqual((await loadCatalog(f.root)).map(r => r.id), ['z-first', 'a-second', 'm-third']);
+  second.sequence = 1;
+  await writeFile(path.join(f.root, 'catalog', 'a-second.json'), JSON.stringify(second));
+  await assert.rejects(loadCatalog(f.root), /Повторный номер добавления/);
+});

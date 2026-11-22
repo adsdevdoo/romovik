@@ -13,6 +13,7 @@ export async function importDump(options, root = ROOT) {
   const ext = path.extname(options.file).toLowerCase();
   const photoBytes = await Promise.all((options.photos ?? []).map(file => readFile(file)));
   const record = validateRecord({
+    sequence: existing.reduce((highest, item) => Math.max(highest, item.sequence), 0) + 1,
     id: options.id, chip: options.chip, manufacturer: options.manufacturer ?? '',
     type: options.type ?? 'Другое', package: options.package ?? '', label: options.label ?? '',
     description: options.description ?? '', device: options.device ?? '', board: options.board ?? '',

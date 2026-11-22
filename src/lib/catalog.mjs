@@ -28,6 +28,7 @@ function safeName(value) {
 export function validateRecord(record) {
   if (!record || typeof record !== 'object' || Array.isArray(record)) fail('Карточка должна быть объектом.');
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.id ?? '')) fail('id: используйте строчные латинские буквы, цифры и дефисы.');
+  if (!Number.isSafeInteger(record.sequence) || record.sequence < 1) fail('sequence: требуется постоянный положительный номер добавления.');
   for (const field of ['chip', 'manufacturer', 'package', 'label', 'description', 'device', 'board', 'programmer', 'profile', 'notes']) textField(record[field], field, field === 'chip');
   if (!TYPES.includes(record.type)) fail(`Неизвестный тип: ${record.type}`);
   for (const [key, values] of [['origin', ORIGINS], ['readVerification', READINGS], ['deviceTest', DEVICE_TESTS]]) if (!Object.hasOwn(values, record[key])) fail(`Недопустимое значение ${key}.`);
@@ -57,14 +58,17 @@ export async function loadCatalog(root = ROOT) {
   const directory = path.join(root, 'catalog');
   const files = (await readdir(directory)).filter(name => name.endsWith('.json')).sort();
   const records = [];
+  const sequences = new Set();
   for (const name of files) {
     try {
       const record = validateRecord(JSON.parse(await readFile(path.join(directory, name), 'utf8')));
       if (name !== `${record.id}.json`) fail('Имя файла должно совпадать с id.');
+      if (sequences.has(record.sequence)) fail(`Повторный номер добавления: ${record.sequence}`);
+      sequences.add(record.sequence);
       records.push(record);
     } catch (error) { fail(`${name}: ${error.message}`); }
   }
-  return records.sort((a, b) => b.dateAdded.localeCompare(a.dateAdded) || a.id.localeCompare(b.id));
+  return records.sort((a, b) => a.sequence - b.sequence);
 }
 export async function assetPath(root, id, filename) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id) || !safeName(filename)) fail('Недопустимый путь вложения.');

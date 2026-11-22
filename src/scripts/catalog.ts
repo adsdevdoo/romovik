@@ -1,5 +1,4 @@
 const input = document.querySelector<HTMLInputElement>('#search')!;
-const sort = document.querySelector<HTMLSelectElement>('#sort')!;
 const buttons = [...document.querySelectorAll<HTMLButtonElement>('button[data-type]')];
 const records = [...document.querySelectorAll<HTMLElement>('[data-record]')];
 const list = document.querySelector('#record-list')!;
@@ -10,8 +9,7 @@ let type = '';
 function update() {
   const terms = normalize(input.value).trim().split(/\s+/).filter(Boolean);
   let count = 0;
-  const sorted = [...records].sort((a, b) => sort.value === 'chip' ? a.dataset.chip!.localeCompare(b.dataset.chip!, 'ru') : sort.value === 'size' ? Number(a.dataset.size) - Number(b.dataset.size) : b.dataset.date!.localeCompare(a.dataset.date!));
-  for (const record of sorted) {
+  for (const record of records) {
     record.hidden = !((!type || record.dataset.type === type) && terms.every(term => record.dataset.search!.includes(term)));
     if (!record.hidden) count++;
     list.append(record);
@@ -25,18 +23,17 @@ function update() {
   document.querySelector<HTMLElement>('#empty-about')!.hidden = !pristine;
   reset.hidden = pristine;
   const url = new URL(location.href);
-  for (const [key, value] of [['q', input.value.trim()], ['type', type], ['sort', sort.value === 'new' ? '' : sort.value]]) value ? url.searchParams.set(key, value) : url.searchParams.delete(key);
+  url.searchParams.delete('sort');
+  for (const [key, value] of [['q', input.value.trim()], ['type', type]]) value ? url.searchParams.set(key, value) : url.searchParams.delete(key);
   history.replaceState(null, '', url);
 }
 input.addEventListener('input', update);
-sort.addEventListener('change', update);
 buttons.forEach(button => button.addEventListener('click', () => { type = button.dataset.type!; update(); }));
-reset.addEventListener('click', () => { input.value = ''; type = ''; sort.value = 'new'; update(); input.focus(); });
+reset.addEventListener('click', () => { input.value = ''; type = ''; update(); input.focus(); });
 function restore() {
   const params = new URLSearchParams(location.search);
   input.value = params.get('q') || '';
   type = buttons.some(button => button.dataset.type === params.get('type')) ? params.get('type')! : '';
-  sort.value = ['new', 'chip', 'size'].includes(params.get('sort')!) ? params.get('sort')! : 'new';
   update();
 }
 window.addEventListener('popstate', restore);

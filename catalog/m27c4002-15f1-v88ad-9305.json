@@ -1,0 +1,38 @@
+{
+  "sequence": 22,
+  "id": "m27c4002-15f1-v88ad-9305",
+  "chip": "M27C4002-15F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "M27C4002 / -15F1 / V88AD / 9305 / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4002-15F1 на программаторе XGecu T56. Суффикс -15F1 и коды V88AD / 9305 уточнены владельцем. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4002 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "При аналитической перестановке соседних байтов внутри 16-битных слов обнаружен текст TESTEN DER EING^NGE / AUSG^NGE (блок от смещения 133174), а также Dip Switch, LAMPE HALTEN, HOPPER COUNT, HOPPER DRIVE и BUCHHALTUNG (блок от 133280). Символ ^ сохранён буквально. Это признаки содержимого, а не подтверждение устройства. Исходный BIN сохранён без перестановок; приведённые здесь декодированные фразы не являются непрерывными ASCII-строками в исходном порядке байтов.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4002@DIP40.BIN",
+    "size": 524288,
+    "sha256": "29b12f9e6675591414145276efb353923f2e68b8c438b928558cde36709adc9b"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4002-15F1 — фотография 1",
+      "size": 1310245,
+      "sha256": "9049648e5caa9df425ecb9821722267b895f10666c843ea8234089267b21683d"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

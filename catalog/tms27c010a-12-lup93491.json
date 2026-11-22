@@ -34,9 +34,21 @@
     }
   ],
   "strings": [
-    { "offset": 58296, "encoding": "ASCII", "text": "SUMCHECK ERROR 2" },
-    { "offset": 59340, "encoding": "ASCII", "text": "PROM A" },
-    { "offset": 65504, "encoding": "ASCII", "text": "ADDERPR6495V5" }
+    {
+      "offset": 58296,
+      "encoding": "ASCII",
+      "text": "SUMCHECK ERROR 2"
+    },
+    {
+      "offset": 59340,
+      "encoding": "ASCII",
+      "text": "PROM A"
+    },
+    {
+      "offset": 65504,
+      "encoding": "ASCII",
+      "text": "ADDERPR6495V5"
+    }
   ],
   "stringsReviewed": true
 }

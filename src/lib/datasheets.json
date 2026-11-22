@@ -1,5 +1,19 @@
 [
   {
+    "id": "m27c4002",
+    "title": "M27C4002",
+    "publisher": "STMicroelectronics",
+    "manufacturers": ["STMicroelectronics"],
+    "models": ["M27C4002-15F1"],
+    "revision": "Август 2001",
+    "file": "m27c4002-9d7fbee60ccc.pdf",
+    "size": 191515,
+    "sha256": "9d7fbee60ccc8ab7c686d6ebbd5096e3ccb633e1577089ba06d53115e4cb99a2",
+    "pages": 19,
+    "sourceUrl": "https://www.silicon-ark.co.uk/datasheets/m27c4002-datasheet-st.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "am27c020",
     "title": "Am27C020",
     "publisher": "AMD (Advanced Micro Devices)",

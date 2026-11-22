@@ -1,0 +1,50 @@
+{
+  "sequence": 17,
+  "id": "m27c4001-10f1-b8840-0248l-2",
+  "chip": "M27C4001-10F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "M27C4001 / -10F1 / B8840 / 0248L / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4001-10F1 на программаторе XGecu T56. Отдельный экземпляр с маркировкой B8840 / 0248L. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4001 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4001@DIP32-5.BIN",
+    "size": 524288,
+    "sha256": "0eceb9bc3e6621ff8f5f0172d40c0e250c37037c8c09c216075c902695d7a8c0"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4001-10F1 — фотография 1",
+      "size": 1518276,
+      "sha256": "03b064d960b5ded59767eb109f1262ff2e7dfa491da8004bb090998a1c75ddf1"
+    }
+  ],
+  "strings": [
+    { "offset": 161291, "encoding": "ASCII", "text": "CRUM 1.2" },
+    { "offset": 161754, "encoding": "ASCII", "text": "Spezial ACTON LINE" },
+    { "offset": 181499, "encoding": "ASCII", "text": "September '96  Original version written..............Bammer G" },
+    { "offset": 181849, "encoding": "ASCII", "text": "Multi-Game-System-Configuration" },
+    { "offset": 195200, "encoding": "ASCII", "text": "#define VERSIONNUMBER          \"VISR 1.2\"  /* 8 Stellen */" },
+    { "offset": 325573, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CLET 1.2\"  /* 8 Stellen */" },
+    { "offset": 369828, "encoding": "ASCII", "text": "CasinoCard" },
+    { "offset": 369852, "encoding": "ASCII", "text": "FruitPoker" },
+    { "offset": 370462, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"CBUL 1.2\"  /* 8 Stellen */" },
+    { "offset": 370616, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"VBUL 1.2\"  /* 8 Stellen */" },
+    { "offset": 450827, "encoding": "ASCII", "text": "*           Copyright (c) 1994 AMATIC Trading Ges.m.b.H Rutzenmoos" }
+  ],
+  "stringsReviewed": true
+}

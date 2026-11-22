@@ -1,0 +1,49 @@
+{
+  "sequence": 16,
+  "id": "m27c4001-10f1-b8840-0248l",
+  "chip": "M27C4001-10F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "M27C4001 / -10F1 / B8840 / 0248L / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4001-10F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4001 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4001@DIP32-4.BIN",
+    "size": 524288,
+    "sha256": "5f7e56ce475578557c4cc689bbc2369e4776ae90c693039eb99dcdbe4ce0d4ee"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4001-10F1 — фотография 1",
+      "size": 1439119,
+      "sha256": "f505f4e62ae534a26c3e758e136def7a39205281aa4b82303381c272c4dc16ce"
+    }
+  ],
+  "strings": [
+    { "offset": 156425, "encoding": "ASCII", "text": "Games included:" },
+    { "offset": 156807, "encoding": "ASCII", "text": "CasinoCard" },
+    { "offset": 156831, "encoding": "ASCII", "text": "FruitPoker" },
+    { "offset": 157159, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"SSLO 1.2\"" },
+    { "offset": 157259, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"CSLO 1.2\"" },
+    { "offset": 157622, "encoding": "ASCII", "text": "Spezial MEGA CARD" },
+    { "offset": 323174, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CEST 1.2\"  /* 8 Stellen */" },
+    { "offset": 326572, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"SRUS 1.2\"  /* 8 Stellen */" },
+    { "offset": 326688, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CRUS 1.2\"  /* 8 Stellen */" },
+    { "offset": 442624, "encoding": "ASCII", "text": "Copyright (c) 1994 Amatic Trading GmbH" }
+  ],
+  "stringsReviewed": true
+}

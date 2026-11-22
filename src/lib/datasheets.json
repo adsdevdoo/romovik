@@ -1,5 +1,19 @@
 [
   {
+    "id": "tms27c040",
+    "title": "TMS27C040",
+    "publisher": "Texas Instruments",
+    "manufacturers": ["Texas Instruments"],
+    "models": ["TMS27C040-15JL"],
+    "revision": "SMLS040F, сентябрь 1997",
+    "file": "tms27c040-7672188fc126.pdf",
+    "size": 192279,
+    "sha256": "7672188fc12639a836b7eddf5e742a53dcb5a63871a9b14e1e2492c0049a77f8",
+    "pages": 12,
+    "sourceUrl": "https://www.icbase.com/File/PDF/TTI/TTI41111001.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "m27c1001",
     "title": "M27C1001",
     "publisher": "SGS-THOMSON",

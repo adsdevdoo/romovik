@@ -36,7 +36,11 @@ for (const record of records) {
   const document = getDatasheet(record);
   assert.ok(document, `${record.id}: missing reviewed datasheet`);
   assert.ok(html.includes(`href="${datasheetUrl(document)}"`), `${record.id}: missing datasheet link`);
-  for (const item of record.strings) assert.ok(html.includes(item.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')));
+  for (const item of record.strings) {
+    const escaped = item.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+    assert.ok(html.includes(escaped), `${record.id}: missing string at ${item.offset}`);
+  }
 }
 for (const document of datasheets) {
   const response = await fetch(`${base}${datasheetUrl(document)}`);

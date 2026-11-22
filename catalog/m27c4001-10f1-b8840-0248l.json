@@ -34,16 +34,56 @@
     }
   ],
   "strings": [
-    { "offset": 156425, "encoding": "ASCII", "text": "Games included:" },
-    { "offset": 156807, "encoding": "ASCII", "text": "CasinoCard" },
-    { "offset": 156831, "encoding": "ASCII", "text": "FruitPoker" },
-    { "offset": 157159, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"SSLO 1.2\"" },
-    { "offset": 157259, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"CSLO 1.2\"" },
-    { "offset": 157622, "encoding": "ASCII", "text": "Spezial MEGA CARD" },
-    { "offset": 323174, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CEST 1.2\"  /* 8 Stellen */" },
-    { "offset": 326572, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"SRUS 1.2\"  /* 8 Stellen */" },
-    { "offset": 326688, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CRUS 1.2\"  /* 8 Stellen */" },
-    { "offset": 442624, "encoding": "ASCII", "text": "Copyright (c) 1994 Amatic Trading GmbH" }
+    {
+      "offset": 156425,
+      "encoding": "ASCII",
+      "text": "Games included:"
+    },
+    {
+      "offset": 156807,
+      "encoding": "ASCII",
+      "text": "CasinoCard"
+    },
+    {
+      "offset": 156831,
+      "encoding": "ASCII",
+      "text": "FruitPoker"
+    },
+    {
+      "offset": 157159,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER         \"SSLO 1.2\""
+    },
+    {
+      "offset": 157259,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER         \"CSLO 1.2\""
+    },
+    {
+      "offset": 157622,
+      "encoding": "ASCII",
+      "text": "Spezial MEGA CARD"
+    },
+    {
+      "offset": 323174,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER                \"CEST 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 326572,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER                \"SRUS 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 326688,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER                \"CRUS 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 442624,
+      "encoding": "ASCII",
+      "text": "Copyright (c) 1994 Amatic Trading GmbH"
+    }
   ],
   "stringsReviewed": true
 }

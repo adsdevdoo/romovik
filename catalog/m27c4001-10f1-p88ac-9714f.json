@@ -34,17 +34,61 @@
     }
   ],
   "strings": [
-    { "offset": 324116, "encoding": "ASCII", "text": "UNIDESA" },
-    { "offset": 324337, "encoding": "ASCII", "text": "Reset Factory?" },
-    { "offset": 334081, "encoding": "ASCII", "text": "FORTUNA" },
-    { "offset": 334803, "encoding": "ASCII", "text": "AUGURI" },
-    { "offset": 335491, "encoding": "ASCII", "text": "Jugadas" },
-    { "offset": 416602, "encoding": "ASCII", "text": "Germany_DMT" },
-    { "offset": 417568, "encoding": "ASCII", "text": "Eslovaquia" },
-    { "offset": 418192, "encoding": "ASCII", "text": "Italia_2GM" },
-    { "offset": 420932, "encoding": "ASCII", "text": "Internacional" },
-    { "offset": 424832, "encoding": "ASCII", "text": "eL6_MMPAN" },
-    { "offset": 424931, "encoding": "ASCII", "text": "eL6_MMPAN_1" }
+    {
+      "offset": 324116,
+      "encoding": "ASCII",
+      "text": "UNIDESA"
+    },
+    {
+      "offset": 324337,
+      "encoding": "ASCII",
+      "text": "Reset Factory?"
+    },
+    {
+      "offset": 334081,
+      "encoding": "ASCII",
+      "text": "FORTUNA"
+    },
+    {
+      "offset": 334803,
+      "encoding": "ASCII",
+      "text": "AUGURI"
+    },
+    {
+      "offset": 335491,
+      "encoding": "ASCII",
+      "text": "Jugadas"
+    },
+    {
+      "offset": 416602,
+      "encoding": "ASCII",
+      "text": "Germany_DMT"
+    },
+    {
+      "offset": 417568,
+      "encoding": "ASCII",
+      "text": "Eslovaquia"
+    },
+    {
+      "offset": 418192,
+      "encoding": "ASCII",
+      "text": "Italia_2GM"
+    },
+    {
+      "offset": 420932,
+      "encoding": "ASCII",
+      "text": "Internacional"
+    },
+    {
+      "offset": 424832,
+      "encoding": "ASCII",
+      "text": "eL6_MMPAN"
+    },
+    {
+      "offset": 424931,
+      "encoding": "ASCII",
+      "text": "eL6_MMPAN_1"
+    }
   ],
   "stringsReviewed": true
 }

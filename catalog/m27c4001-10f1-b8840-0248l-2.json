@@ -34,17 +34,61 @@
     }
   ],
   "strings": [
-    { "offset": 161291, "encoding": "ASCII", "text": "CRUM 1.2" },
-    { "offset": 161754, "encoding": "ASCII", "text": "Spezial ACTON LINE" },
-    { "offset": 181499, "encoding": "ASCII", "text": "September '96  Original version written..............Bammer G" },
-    { "offset": 181849, "encoding": "ASCII", "text": "Multi-Game-System-Configuration" },
-    { "offset": 195200, "encoding": "ASCII", "text": "#define VERSIONNUMBER          \"VISR 1.2\"  /* 8 Stellen */" },
-    { "offset": 325573, "encoding": "ASCII", "text": "#define VERSIONNUMBER                \"CLET 1.2\"  /* 8 Stellen */" },
-    { "offset": 369828, "encoding": "ASCII", "text": "CasinoCard" },
-    { "offset": 369852, "encoding": "ASCII", "text": "FruitPoker" },
-    { "offset": 370462, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"CBUL 1.2\"  /* 8 Stellen */" },
-    { "offset": 370616, "encoding": "ASCII", "text": "#define VERSIONNUMBER         \"VBUL 1.2\"  /* 8 Stellen */" },
-    { "offset": 450827, "encoding": "ASCII", "text": "*           Copyright (c) 1994 AMATIC Trading Ges.m.b.H Rutzenmoos" }
+    {
+      "offset": 161291,
+      "encoding": "ASCII",
+      "text": "CRUM 1.2"
+    },
+    {
+      "offset": 161754,
+      "encoding": "ASCII",
+      "text": "Spezial ACTON LINE"
+    },
+    {
+      "offset": 181499,
+      "encoding": "ASCII",
+      "text": "September '96  Original version written..............Bammer G"
+    },
+    {
+      "offset": 181849,
+      "encoding": "ASCII",
+      "text": "Multi-Game-System-Configuration"
+    },
+    {
+      "offset": 195200,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER          \"VISR 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 325573,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER                \"CLET 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 369828,
+      "encoding": "ASCII",
+      "text": "CasinoCard"
+    },
+    {
+      "offset": 369852,
+      "encoding": "ASCII",
+      "text": "FruitPoker"
+    },
+    {
+      "offset": 370462,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER         \"CBUL 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 370616,
+      "encoding": "ASCII",
+      "text": "#define VERSIONNUMBER         \"VBUL 1.2\"  /* 8 Stellen */"
+    },
+    {
+      "offset": 450827,
+      "encoding": "ASCII",
+      "text": "*           Copyright (c) 1994 AMATIC Trading Ges.m.b.H Rutzenmoos"
+    }
   ],
   "stringsReviewed": true
 }

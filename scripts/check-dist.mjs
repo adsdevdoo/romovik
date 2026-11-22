@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { stat } from 'node:fs/promises';
 import { loadCatalog, sha256 } from '../src/lib/catalog.mjs';
-import { datasheets, getDatasheet, datasheetUrl } from '../src/lib/datasheets.mjs';
+import { datasheets, datasheetGaps, getDatasheet, getDatasheetGap, datasheetUrl } from '../src/lib/datasheets.mjs';
 const base = process.env.CHECK_URL || 'http://localhost:4321';
 await stat('dist/server/entry.mjs');
 const records = await loadCatalog();
@@ -34,8 +34,14 @@ for (const record of records) {
   }
   const html = await (await fetch(`${base}/rom/${record.id}/`)).text();
   const document = getDatasheet(record);
-  assert.ok(document, `${record.id}: missing reviewed datasheet`);
-  assert.ok(html.includes(`href="${datasheetUrl(document)}"`), `${record.id}: missing datasheet link`);
+  if (document) {
+    assert.ok(html.includes(`href="${datasheetUrl(document)}"`), `${record.id}: missing datasheet link`);
+  } else {
+    const gap = getDatasheetGap(record);
+    assert.ok(gap, `${record.id}: missing reviewed datasheet or documented search`);
+    assert.ok(html.includes(gap.reason), `${record.id}: missing datasheet status`);
+    assert.ok(!html.includes('href="/datasheets/'), `${record.id}: unrelated PDF link`);
+  }
   for (const item of record.strings) {
     const escaped = item.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
       .replaceAll('"', '&quot;').replaceAll("'", '&#39;');
@@ -51,4 +57,4 @@ for (const document of datasheets) {
   assert.equal(sha256(bytes), document.sha256, document.file);
 }
 assert.match(await (await fetch(`${base}/robots.txt`)).text(), /Allow: \/[\s\S]+Sitemap: https:/);
-console.log(`Verified ${paths.length} SSR pages, ${links.size} links, ${records.length} records, ${assets} byte-identical assets, ${datasheets.length} unique PDF datasheets, search order, sitemap, 404, private moderation.`);
+console.log(`Verified ${paths.length} SSR pages, ${links.size} links, ${records.length} records, ${assets} byte-identical assets, ${datasheets.length} unique PDF datasheets, ${datasheetGaps.length} documented missing datasheets, search order, sitemap, 404, private moderation.`);

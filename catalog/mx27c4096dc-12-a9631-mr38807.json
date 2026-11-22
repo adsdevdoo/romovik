@@ -1,0 +1,38 @@
+{
+  "sequence": 27,
+  "id": "mx27c4096dc-12-a9631-mr38807",
+  "chip": "MX27C4096DC-12",
+  "manufacturer": "Macronix",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "MX / A9631 / 27C4096DC-12 / MR38807 / PHILIPPINES / VPP=12.5V",
+  "description": "Считано с Macronix MX27C4096DC-12 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "MX27C4096 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "При анализе с перестановкой соседних байтов в 16-битных словах в блоке 0x109A читается BEL SLOTS    V6.10, в блоке 0x14040 — Slots international. Это текст содержимого, а не подтверждение происхождения устройства. Исходный BIN сохранён без перестановки байтов.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "MX27C4096@DIP40.BIN",
+    "size": 524288,
+    "sha256": "d315253462d870d1ba43a2dda8e17b693078e345c2fed6eb214252411a50afb4"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "MX27C4096DC-12 — фотография 1",
+      "size": 1361427,
+      "sha256": "5c99093c03ddfcd76a4b0e83e82b083dd9ab990a5243b0332ef8f80f67a379a8"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

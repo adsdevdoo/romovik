@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { sha256 } from '../src/lib/catalog.mjs';
-import { datasheets } from '../src/lib/datasheets.mjs';
+import { datasheets, datasheetGaps, getDatasheet } from '../src/lib/datasheets.mjs';
 
 export async function verifyDatasheets(root) {
   const directory = path.join(root, 'public/datasheets');
@@ -29,5 +29,14 @@ export async function verifyDatasheets(root) {
     assert.equal(sha256(bytes), document.sha256, document.file);
   }
   assert.deepEqual((await readdir(directory)).sort(), datasheets.map(document => document.file).sort(), 'Unregistered datasheet files');
+  const gapPairs = new Set();
+  for (const gap of datasheetGaps) {
+    assert.ok(gap.chip && gap.manufacturer && gap.reason);
+    assert.match(gap.checkedAt, /^\d{4}-\d{2}-\d{2}$/);
+    const pair = JSON.stringify([gap.chip.trim().toUpperCase(), gap.manufacturer.trim().toUpperCase()]);
+    assert.ok(!gapPairs.has(pair), `Duplicate datasheet gap: ${pair}`);
+    gapPairs.add(pair);
+    assert.equal(getDatasheet(gap), null, `Remove resolved datasheet gap: ${gap.chip}`);
+  }
   return datasheets.length;
 }

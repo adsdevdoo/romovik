@@ -1,0 +1,38 @@
+{
+  "sequence": 28,
+  "id": "tb27c4096-10-9811",
+  "chip": "TB27C4096-10",
+  "manufacturer": "TBM (маркировка на корпусе)",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "TBM / TB27C4096 / 9811 / -10",
+  "description": "Считано с TB27C4096-10 на программаторе XGecu T56. На корпусе указано TBM; полное наименование производителя не установлено. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "HN27C4096 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "HN27C4096@DIP40.BIN",
+    "size": 524288,
+    "sha256": "25a13d82816513603f8b29a13a3a669f3e1f0ca5fcefde6843ac248a1ae8f649"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "TB27C4096-10 — фотография 1",
+      "size": 1380064,
+      "sha256": "3371c8af9515347e2ae9ec981c104371f265be991437e690f56fae97bb00f1c9"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

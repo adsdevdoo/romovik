@@ -1,5 +1,19 @@
 [
   {
+    "id": "mx27c4096",
+    "title": "MX27C4100 / MX27C4096",
+    "publisher": "Macronix",
+    "manufacturers": ["Macronix"],
+    "models": ["MX27C4096DC-12"],
+    "revision": "PM0197 Rev. 3.1, 17 июля 1997",
+    "file": "mx27c4096-31816b778d82.pdf",
+    "size": 121769,
+    "sha256": "31816b778d82f22b0596a35d73b72d574bfe871be972f6848e1a6796f2a86130",
+    "pages": 17,
+    "sourceUrl": "https://www.amigawiki.com/lib/exe/fetch.php?media=de%3Aparts%3Aeprom_mx27c4100dc_1997_datasheet.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "tms27c210",
     "title": "TMS27C210",
     "publisher": "Texas Instruments",

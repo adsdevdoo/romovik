@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Chip from '../components/Chip.astro';
+import { loadCatalog, TYPES, ORIGINS, formatSize, dateLabel, assetUrl, searchText } from '../lib/catalog.mjs';
+const records = await loadCatalog();
+const categories = TYPES.map(type => ({ type, count: records.filter(record => record.type === type).length }));
+const known = records.filter(record => record.origin === 'known').length;
+---
+<Layout title="ROMовик — архив дампов ПЗУ и прошивок" description="Открытая коллекция дампов ПЗУ: EPROM, EEPROM, Flash и ROM. Маркировки микросхем, фотографии, история устройств и исходные файлы для скачивания.">
+  <section class="hero shell">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-chip" aria-hidden="true"></span> Открытый архив памяти</p>
+      <h1>Память железа.<br /><span>Сохранена.</span></h1>
+      <p class="hero-description">Дампы ПЗУ, маркировки и истории устройств.<br class="hidden sm:block" /> Сохраняем то, что осталось внутри микросхем.</p>
+      <div class="hero-actions"><a class="button" href="#catalog">Смотреть каталог</a><a class="text-link" href="/about/">Как устроен архив</a></div>
+    </div>
+    <div class="hero-visual"><div class="visual-caption"><span>ROM / EPROM / EEPROM / FLASH</span><span>RAW MEMORY</span></div><Chip /><div class="visual-bottom"><span>Маленький чип. Большая история.</span><span class="mono">[ R ]</span></div></div>
+  </section>
+  <div class="stats-strip shell" aria-label="Статистика архива">
+    <div><strong>{records.length}</strong><span>дампов в архиве</span></div>
+    <div><strong>{known}</strong><span>с известным происхождением</span></div>
+    <div><strong class="mono">T56</strong><span>программатор коллекции</span></div>
+    <p>Считано с микросхем.<br />Сохранено для всех.</p>
+  </div>
+  <section class="catalog-section shell" id="catalog" aria-labelledby="catalog-heading">
+    <div class="section-heading"><div><p class="eyebrow">Коллекция</p><h2 id="catalog-heading">Каталог дампов</h2></div><span class="section-note">Исходные файлы и всё, что о них известно</span></div>
+    <div class="catalog-layout">
+      <aside class="filters" aria-label="Фильтры каталога">
+        <p class="filter-heading">Тип памяти</p>
+        <div class="filter-list" role="group" aria-label="Тип памяти">
+          <button type="button" class="filter active" data-type="" aria-pressed="true"><span>Все микросхемы</span><span class="count">{records.length}</span></button>
+          {categories.map(({ type, count }) => <button type="button" class="filter" data-type={type} aria-pressed="false"><span>{type}</span><span class="count">{count}</span></button>)}
+        </div>
+        <div class="sidebar-note"><span class="mono note-symbol" aria-hidden="true">?</span><h3>Чип без истории?</h3><p>Неизвестное устройство — тоже часть коллекции. Маркировка и дамп могут помочь его узнать.</p><a href="/about/#unknown">О неизвестных ПЗУ</a></div>
+      </aside>
+      <div class="catalog-content">
+        <div class="search-bar"><label class="search-field"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.6"/></svg><span class="sr-only">Поиск по каталогу</span><input id="search" type="search" placeholder="Микросхема, устройство, маркировка…" autocomplete="off" /></label><label class="sort-field"><span class="sr-only">Сортировка</span><select id="sort"><option value="new">Сначала новые</option><option value="chip">По микросхеме</option><option value="size">По размеру</option></select></label></div>
+        <noscript><p class="notice">Все записи доступны ниже. Для поиска и фильтров включите JavaScript.</p></noscript>
+        <p class="result-count" id="result-count" aria-live="polite">Записей: {records.length}</p>
+        <div class="record-list" id="record-list">
+          {records.map(record => <article class="record-card" data-record data-search={searchText(record)} data-type={record.type} data-date={record.dateAdded} data-chip={record.chip} data-size={record.dump.size}>
+            <a class="record-thumbnail" href={`/rom/${record.id}/`} tabindex="-1" aria-hidden="true">{record.photos[0] ? <img src={assetUrl(record, record.photos[0].file)} alt="" loading="lazy" width="144" height="112" /> : <img src="/favicon.svg" alt="" width="52" height="52" />}</a>
+            <div class="record-body"><div class="flex items-center gap-3"><span class="tag">{record.type}</span><span class="muted text-sm">{record.manufacturer}</span></div><h3><a href={`/rom/${record.id}/`}>{record.chip}</a></h3><p>{record.device || record.label || 'Устройство неизвестно'}</p><div class="record-meta"><span>{formatSize(record.dump.size)}</span><span>{ORIGINS[record.origin]}</span><time datetime={record.dateAdded}>{dateLabel(record.dateAdded)}</time></div></div>
+          </article>)}
+        </div>
+        <div class="empty-state" id="empty-state" hidden={records.length > 0} data-pristine={records.length === 0 ? 'true' : 'false'}>
+          <svg width="76" height="76" viewBox="0 0 76 76" fill="none" aria-hidden="true"><rect x="15" y="14" width="46" height="50" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M15 30h46M15 47h46M33 22h10M33 39h10M33 56h10" stroke="currentColor" stroke-width="1.5"/><path d="M24 8h28" stroke="currentColor" stroke-width="1.5"/></svg>
+          <h3 id="empty-title">Первые дампы — впереди</h3><p id="empty-description">Коллекция готовится к публикации.<br />Здесь появятся микросхемы, их истории и файлы памяти.</p><a class="text-link" id="empty-about" href="/about/">Узнать об архиве</a><button class="text-link" type="button" id="reset-filters" hidden>Сбросить поиск и фильтры</button>
+        </div>
+        <div class="catalog-footnote"><span aria-hidden="true">#</span><p>У каждого дампа — размер и SHA-256 для проверки файла. Сведения о чтении и работе в устройстве указаны отдельно.</p></div>
+      </div>
+    </div>
+  </section>
+  <script src="../scripts/catalog.ts"></script>
+</Layout>

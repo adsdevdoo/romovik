@@ -1,0 +1,36 @@
+{
+  "id": "am27c256-205dc-212wxpz",
+  "chip": "AM27C256-205DC",
+  "manufacturer": "AMD (Advanced Micro Devices)",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "AM27C256 / -205DC / 212WXPZ / © 1986 AMD",
+  "description": "ПЗУ AMD AM27C256-205DC. На корпусе видны код 212WXPZ и надпись © 1986 AMD. Фотография сделана с микросхемой в программаторе T56. Устройство и плата происхождения не указаны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "size": 32768,
+    "sha256": "571ebf107d7b5e3cd08f077bb3fbd7d899252f234c690934c95ff684b74eb23c"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "AMD AM27C256-205DC, 212WXPZ, © 1986 AMD в программаторе T56",
+      "size": 1101427,
+      "sha256": "56815b1a2d1bfd247b2771619eaca274f0de01c1922f34c75cbbd9d40845ccd9"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

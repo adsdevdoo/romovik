@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { loadCatalog, ORIGINS, READINGS, DEVICE_TESTS, formatSize, dateLabel, assetUrl } from '../../lib/catalog.mjs';
+export async function getStaticPaths() { return (await loadCatalog()).map(record => ({ params: { id: record.id }, props: { record } })); }
+const { record } = Astro.props;
+const description = record.description || `${record.chip}: дамп ${formatSize(record.dump.size)}. ${ORIGINS[record.origin]}. Фотографии, маркировка и SHA-256.`;
+const canonical = new URL(`/rom/${record.id}/`, Astro.site).href;
+const structuredData = { '@context': 'https://schema.org', '@type': 'CreativeWork', name: `${record.chip} — дамп ПЗУ`, description, url: canonical, datePublished: record.dateAdded, inLanguage: 'ru', identifier: { '@type': 'PropertyValue', propertyID: 'SHA-256', value: record.dump.sha256 }, ...(record.photos[0] ? { image: new URL(assetUrl(record, record.photos[0].file), Astro.site).href } : {}), encoding: { '@type': 'MediaObject', contentUrl: new URL(assetUrl(record), Astro.site).href, contentSize: `${record.dump.size} bytes` } };
+---
+<Layout title={`${record.chip} — дамп ${formatSize(record.dump.size)} | ROMовик`} description={description} structuredData={structuredData}>
+  <div class="page shell">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="/">Главная</a><span aria-hidden="true">/</span><a href={`/?type=${record.type}#catalog`}>{record.type}</a><span aria-hidden="true">/</span><span aria-current="page">{record.chip}</span></nav>
+    <header class="detail-heading"><div class="flex items-center gap-3"><span class="tag">{record.type}</span><span class="muted text-sm">{record.manufacturer || 'Производитель не указан'}</span></div><h1>{record.chip}</h1><p>{record.device || 'Устройство неизвестно'} · {formatSize(record.dump.size)} · {record.package || 'Корпус не указан'}</p></header>
+    <div class="detail-grid">
+      <div class="photo-gallery">
+        {record.photos.map(photo => <figure><a href={assetUrl(record, photo.file)} aria-label={`Открыть фотографию: ${photo.alt}`}><img src={assetUrl(record, photo.file)} alt={photo.alt} /></a><figcaption>{photo.alt}</figcaption></figure>)}
+        {!record.photos.length && <div class="empty-state"><img src="/favicon.svg" width="64" height="64" alt="" /><p>Фотография пока не добавлена</p></div>}
+      </div>
+      <section class="info-panel" aria-labelledby="file-heading">
+        <h2 id="file-heading">Микросхема и дамп</h2>
+        <dl class="data-list">
+          <div><dt>Производитель</dt><dd>{record.manufacturer || 'Не указан'}</dd></div><div><dt>Маркировка</dt><dd class="mono">{record.label || record.chip}</dd></div><div><dt>Тип памяти</dt><dd>{record.type}</dd></div><div><dt>Корпус</dt><dd>{record.package || 'Не указан'}</dd></div><div><dt>Размер файла</dt><dd>{record.dump.size.toLocaleString('ru-RU')} байт ({formatSize(record.dump.size)})</dd></div><div><dt>Программатор</dt><dd>{record.programmer || 'Не указан'}</dd></div>{record.profile && <div><dt>Профиль чтения</dt><dd>{record.profile}</dd></div>}<div><dt>Происхождение</dt><dd>{ORIGINS[record.origin]}</dd></div>{record.board && <div><dt>Плата</dt><dd>{record.board}</dd></div>}
+        </dl>
+        <a class="button w-full" href={assetUrl(record)} download={`${record.id}.${record.dump.file.split('.').at(-1)}`}>Скачать дамп · {formatSize(record.dump.size)}</a>
+        <p class="download-note">Исходные байты файла, без изменений.</p>
+        <div class="hash-block"><div class="hash-title"><span class="mono">SHA-256</span><button type="button" class="text-link" id="copy-hash">Копировать</button></div><code id="hash">{record.dump.sha256}</code><span id="copy-status" class="sr-only" aria-live="polite"></span></div>
+        <div class="status-list"><p>{READINGS[record.readVerification]}{record.readCount ? ` (${record.readCount})` : ''}</p><p>{DEVICE_TESTS[record.deviceTest]}</p></div>
+      </section>
+    </div>
+    <section class="prose description"><h2>Что известно</h2><p>{record.description || 'Описание пока не добавлено.'}</p>{record.notes && <><h2>Заметки</h2><p>{record.notes}</p></>}{record.tags.length > 0 && <div class="flex flex-wrap gap-2">{record.tags.map(tag => <a class="tag" href={`/?q=${encodeURIComponent(tag)}#catalog`}>{tag}</a>)}</div>}</section>
+    {(record.stringsReviewed || record.strings.length > 0) && <section class="prose description" aria-labelledby="strings-heading"><h2 id="strings-heading">Строки внутри дампа</h2><p>Текст извлечён из файла. Он помогает искать и сопоставлять прошивки, но сам по себе не подтверждает модель устройства. Адреса — смещения от начала файла в шестнадцатеричном виде.</p>{record.strings.length ? <div class="strings-table"><table><thead><tr><th scope="col">Адрес</th><th scope="col">Текст · ASCII</th></tr></thead><tbody>{record.strings.map(item => <tr><td class="mono">0x{item.offset.toString(16).toUpperCase().padStart(4,'0')}</td><td><code>{item.text}</code></td></tr>)}</tbody></table></div> : <p class="notice">При просмотре ASCII-строк содержательных надписей не найдено. Текст в других кодировках или в виде графики этой проверкой не исключается.</p>}</section>}
+    <div class="detail-bottom">Добавлено <time datetime={record.dateAdded}>{dateLabel(record.dateAdded)}</time>{record.readDate && <> · Считано {dateLabel(record.readDate)}</>} · <a class="text-link" href="/#catalog">Все дампы</a></div>
+  </div>
+  <script>
+    document.querySelector('#copy-hash')?.addEventListener('click', async () => {
+      const status = document.querySelector('#copy-status')!;
+      const button = document.querySelector('#copy-hash')!;
+      try { await navigator.clipboard.writeText(document.querySelector('#hash')!.textContent!); button.textContent = 'Скопировано'; status.textContent = 'SHA-256 скопирован'; }
+      catch { button.textContent = 'Выделите хеш'; status.textContent = 'Копирование недоступно. Выделите и скопируйте хеш вручную.'; }
+    });
+  </script>
+</Layout>

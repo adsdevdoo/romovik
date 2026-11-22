@@ -1,0 +1,99 @@
+{
+  "id": "m27c256b-12f1-0114l",
+  "chip": "M27C256B-12F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "M27C256B / -12F1 / 0114L / SINGAPORE",
+  "description": "ПЗУ STMicroelectronics M27C256B-12F1. На корпусе видны логотип ST, код 0114L и надпись SINGAPORE. Микросхема сфотографирована в программаторе T56. Устройство и плата происхождения не указаны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "Внутри дампа многократно повторяется строка SUPERCLUB 750 RUSSIA; также есть названия тестов REEL TEST, LAMP TEST и METER TEST (в исходных строках несколько пробелов). Это текстовые признаки содержимого, а не подтверждение модели или происхождения платы. Один из дополнительных кодов на корпусе плохо различим на фотографии и не расшифрован.",
+  "tags": [
+    "SUPERCLUB 750 RUSSIA"
+  ],
+  "dump": {
+    "file": "dump.bin",
+    "size": 32768,
+    "sha256": "eb879ad4a1f399893c84ab660cbc53ac9917eaf1c299cca2fbafa084b036ab12"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "STMicroelectronics M27C256B-12F1, 0114L, SINGAPORE в программаторе T56",
+      "size": 964548,
+      "sha256": "2f4a949fca019ce5a61317e910f9e1b4147cdce7ebea29bb59d431788b03c60a"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 25241,
+      "encoding": "ASCII",
+      "text": "SUPERCLUB 750 RUSSIA"
+    },
+    {
+      "offset": 7388,
+      "encoding": "ASCII",
+      "text": "LAMP      TEST"
+    },
+    {
+      "offset": 7409,
+      "encoding": "ASCII",
+      "text": "METER     TEST"
+    },
+    {
+      "offset": 7430,
+      "encoding": "ASCII",
+      "text": "REEL      TEST"
+    },
+    {
+      "offset": 7450,
+      "encoding": "ASCII",
+      "text": "DISPLAY    TEST"
+    },
+    {
+      "offset": 7492,
+      "encoding": "ASCII",
+      "text": "SWITCH     TEST"
+    },
+    {
+      "offset": 7535,
+      "encoding": "ASCII",
+      "text": "ERROR     CODES"
+    },
+    {
+      "offset": 7556,
+      "encoding": "ASCII",
+      "text": "SOUND     TEST"
+    },
+    {
+      "offset": 7577,
+      "encoding": "ASCII",
+      "text": "ELEC.    METERS"
+    },
+    {
+      "offset": 23616,
+      "encoding": "ASCII",
+      "text": "BANKNOTE"
+    },
+    {
+      "offset": 23638,
+      "encoding": "ASCII",
+      "text": "PRINTER"
+    },
+    {
+      "offset": 23649,
+      "encoding": "ASCII",
+      "text": "TICKET"
+    }
+  ],
+  "stringsReviewed": true
+}

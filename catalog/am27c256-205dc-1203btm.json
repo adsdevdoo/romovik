@@ -1,0 +1,42 @@
+{
+  "id": "am27c256-205dc-1203btm",
+  "chip": "AM27C256-205DC",
+  "manufacturer": "AMD (Advanced Micro Devices)",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "AM27C256 / -205DC / 1203BTM / © 1986 AMD",
+  "description": "Второй экземпляр AMD AM27C256-205DC. На корпусе код 1203BTM и надпись © 1986 AMD. По сообщению владельца, Check ID в Xgpro не проходит; при отключённой проверке ID файл считывается. Устройство и плата происхождения не указаны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "AM27C256 @DIP28",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "single",
+  "readCount": 1,
+  "deviceTest": "not-tested",
+  "notes": "Владелец сообщил: Check ID не проходит, чтение выполняется с отключённой проверкой ID. Фактический и ожидаемый идентификаторы пока не сообщены. Побайтное сравнение повторных чтений и работа в устройстве не подтверждены. При просмотре ASCII-строк содержательных надписей не найдено.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "size": 32768,
+    "sha256": "bea73cc3b0271cf76d032c988bbb4646ac5c10aabe1f7b9b015ff71c7a476c40"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "AMD AM27C256-205DC, 1203BTM, © 1986 AMD в программаторе T56",
+      "size": 826639,
+      "sha256": "60aec58839d753d92c8db4dd8da0a1a3b05d6e11ed4805ca316e86bea648b4f2"
+    },
+    {
+      "file": "photo-2.png",
+      "alt": "Xgpro: профиль AM27C256 @DIP28, размер 32768 байт, Check ID отключён",
+      "size": 206090,
+      "sha256": "63a5d2385e570fb0cefe32c21a1e7a6000f77d0d4bab22b98555ac667300f50d"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

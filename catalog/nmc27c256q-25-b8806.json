@@ -1,0 +1,96 @@
+{
+  "id": "nmc27c256q-25-b8806",
+  "chip": "NMC27C256Q-25",
+  "manufacturer": "National Semiconductor",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "B8806 / NMC27C256Q / 25",
+  "description": "ПЗУ National Semiconductor с маркировкой NMC27C256Q, 25 и кодом B8806. На фотографии микросхема установлена в программатор T56. Из какого устройства или платы она снята, неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "Внутри файла есть строки IMATIC 95, Copyright (c) 95 by IMATIC (r), IMATIC Yugoslavia и POKER BONUS. Они указывают на возможную связь с видеопокером IMATIC; конкретная модель устройства и плата не подтверждены. Производитель микросхемы — National Semiconductor, его не следует путать с автором программы. Исходный файл назывался NMG27C256Q 25@DIP28.BIN; модель в карточке указана по фотографии корпуса.",
+  "tags": [
+    "IMATIC",
+    "POKER BONUS",
+    "Yugoslavia"
+  ],
+  "dump": {
+    "file": "dump.bin",
+    "size": 32768,
+    "sha256": "777d0d803bc0b63bfc410a55ff2e39118214dcb005e226c6b13b993887be025f"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "National Semiconductor NMC27C256Q, 25, B8806 в программаторе T56",
+      "size": 1244457,
+      "sha256": "27b16df67b1c36c41ec7783cdf976aa1cfaf927ab5a34169120306831eb5a897"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 4,
+      "encoding": "ASCII",
+      "text": "IMATIC 95"
+    },
+    {
+      "offset": 419,
+      "encoding": "ASCII",
+      "text": "STATISTIK"
+    },
+    {
+      "offset": 1784,
+      "encoding": "ASCII",
+      "text": "ELEKTRONIK DEFEKT No."
+    },
+    {
+      "offset": 6898,
+      "encoding": "ASCII",
+      "text": "AUTOHOLD"
+    },
+    {
+      "offset": 6927,
+      "encoding": "ASCII",
+      "text": "INSERT COIN"
+    },
+    {
+      "offset": 6969,
+      "encoding": "ASCII",
+      "text": "ROYAL FLUSH"
+    },
+    {
+      "offset": 7248,
+      "encoding": "ASCII",
+      "text": "Copyright (c) 95 by IMATIC (r)"
+    },
+    {
+      "offset": 7300,
+      "encoding": "ASCII",
+      "text": "SELECT  HOLD  CARDS"
+    },
+    {
+      "offset": 7381,
+      "encoding": "ASCII",
+      "text": "IMATIC  Yugoslavia"
+    },
+    {
+      "offset": 16368,
+      "encoding": "ASCII",
+      "text": "POKER BONUS"
+    },
+    {
+      "offset": 20319,
+      "encoding": "ASCII",
+      "text": "Sigurnosno knjigovodstvo"
+    }
+  ],
+  "stringsReviewed": true
+}

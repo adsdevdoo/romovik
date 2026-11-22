@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { loadCatalog, ORIGINS, READINGS, DEVICE_TESTS, formatSize, dateLabel, assetUrl } from '../../lib/catalog.mjs';
-export async function getStaticPaths() { return (await loadCatalog()).map(record => ({ params: { id: record.id }, props: { record } })); }
-const { record } = Astro.props;
+import { ORIGINS, READINGS, DEVICE_TESTS, formatSize, dateLabel, assetUrl } from '../../lib/catalog.mjs';
+import { getRecord } from '../../lib/public-catalog.mjs';
+const record = await getRecord(Astro.params.id);
+if (!record) return Astro.rewrite('/404');
 const description = record.description || `${record.chip}: дамп ${formatSize(record.dump.size)}. ${ORIGINS[record.origin]}. Фотографии, маркировка и SHA-256.`;
 const canonical = new URL(`/rom/${record.id}/`, Astro.site).href;
 const structuredData = { '@context': 'https://schema.org', '@type': 'CreativeWork', name: `${record.chip} — дамп ПЗУ`, description, url: canonical, datePublished: record.dateAdded, inLanguage: 'ru', identifier: { '@type': 'PropertyValue', propertyID: 'SHA-256', value: record.dump.sha256 }, ...(record.photos[0] ? { image: new URL(assetUrl(record, record.photos[0].file), Astro.site).href } : {}), encoding: { '@type': 'MediaObject', contentUrl: new URL(assetUrl(record), Astro.site).href, contentSize: `${record.dump.size} bytes` } };

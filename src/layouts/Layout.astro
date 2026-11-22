@@ -32,14 +32,14 @@ const data = structuredData || { '@context': 'https://schema.org', '@type': 'Web
         <nav aria-label="Основная навигация" class="flex items-center gap-6 sm:gap-8">
           <a href="/#catalog" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Каталог</a>
           <a href="/about/" aria-current={Astro.url.pathname === '/about/' ? 'page' : undefined}>Об архиве</a>
-          <a class="github-link" href="https://github.com/adsdevdoo/romovik">GitHub</a>
+          <a href="/submit/" aria-current={Astro.url.pathname === '/submit/' ? 'page' : undefined}>Прислать дамп</a>
         </nav>
       </div>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer shell">
       <div><a class="brand text-lg" href="/">ROMовик</a><p>У каждого чипа есть история.</p></div>
-      <div class="footer-links"><a href="/about/">Об архиве</a><a href="/dumps/catalog.json">Каталог JSON</a><a href="https://github.com/adsdevdoo/romovik">Исходный код</a></div>
+      <div class="footer-links"><a href="/about/">Об архиве</a><a href="/submit/">Прислать дамп</a><a href="/dumps/catalog.json">Каталог JSON</a><a href="https://github.com/adsdevdoo/romovik">Исходный код</a><a href="/moderation/">Модерация</a></div>
       <span class="footer-note">Часть creepypaste</span>
     </footer>
   </body>

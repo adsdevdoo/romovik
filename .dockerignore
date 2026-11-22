@@ -1,0 +1,8 @@
+.git
+node_modules
+archive
+data
+dist
+public/dumps
+server
+.env*

@@ -1,0 +1,38 @@
+{
+  "sequence": 12,
+  "id": "m27c160-100f1-96006",
+  "chip": "M27C160-100F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-42, керамический корпус с окном",
+  "label": "M27C160 / 100F1 M / 96006 V5 / MYS 96 709",
+  "description": "Считано с STMicroelectronics M27C160-100F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C160 @DIP42",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C160@DIP42.BIN",
+    "size": 2097152,
+    "sha256": "8667d11809676474417834193c3ad614f566433c34b4373f80550ff28c8c764b"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C160-100F1 — фотография 1",
+      "size": 1447456,
+      "sha256": "81f3b91a0ea2f4a8c3fe8737ca003499510f5c665452565df4b1fac7c813316c"
+    }
+  ],
+  "strings": [],
+  "stringsReviewed": true
+}

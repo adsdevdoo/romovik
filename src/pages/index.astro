@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Chip from '../components/Chip.astro';
-import { loadCatalog, TYPES, ORIGINS, formatSize, dateLabel, assetUrl, searchText } from '../lib/catalog.mjs';
-const records = await loadCatalog();
+import { TYPES, ORIGINS, formatSize, dateLabel, assetUrl, searchText } from '../lib/catalog.mjs';
+import { getCatalog } from '../lib/public-catalog.mjs';
+const records = await getCatalog();
 const categories = TYPES.map(type => ({ type, count: records.filter(record => record.type === type).length }));
 const known = records.filter(record => record.origin === 'known').length;
 ---

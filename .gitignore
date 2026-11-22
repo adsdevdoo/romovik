@@ -8,3 +8,5 @@ archive/
 public/dumps/
 *.log
 .DS_Store
+server/target/
+data/

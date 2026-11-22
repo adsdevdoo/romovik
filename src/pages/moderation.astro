@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { TYPES } from '../lib/catalog.mjs';
+---
+<Layout title="Модерация — ROMовик" description="Проверка присланных дампов ПЗУ." noindex>
+  <section class="page shell form-page moderation-page">
+    <p class="eyebrow">ROMовик</p><h1>Модерация</h1>
+    <p id="moderation-message" role="status" aria-live="polite"></p>
+    <form id="login-form" class="archive-form compact-form" hidden><h2>Вход модератора</h2><label>Логин<input name="login" autocomplete="username" value="admin" required /></label><label>Пароль<input name="password" type="password" autocomplete="current-password" maxlength="256" required /></label><button class="button">Войти</button></form>
+    <form id="password-form" class="archive-form compact-form" hidden><h2>Сменить пароль</h2><p>При первом входе замените временный пароль своим.</p><label>Текущий пароль<input name="currentPassword" type="password" autocomplete="current-password" required maxlength="256" /></label><label>Новый пароль<input name="newPassword" type="password" autocomplete="new-password" minlength="12" maxlength="256" required /></label><button class="button">Сохранить пароль</button></form>
+    <div id="moderation-workspace" hidden>
+      <div class="moderation-toolbar"><label>Показать<select id="queue-status"><option value="pending">Ожидают проверки</option><option value="approved">Одобрены</option><option value="rejected">Отклонены</option></select></label><button id="change-password" type="button" class="text-link">Сменить пароль</button><button id="logout" type="button" class="text-link">Выйти</button></div>
+      <p id="queue-count"></p><div id="queue-list" class="queue-list"></div><div class="moderation-toolbar"><button id="previous-page" type="button" class="text-link" hidden>Предыдущие</button><button id="next-page" type="button" class="text-link" hidden>Следующие</button></div>
+      <section id="review" hidden><h2 id="review-title"></h2><p id="review-contact"></p><p id="review-file" class="mono break-all"></p><p id="review-duplicates"></p><div id="review-photos" class="review-photos"></div><a id="review-download" class="text-link">Скачать присланный дамп</a>
+        <form id="review-form" class="archive-form"><fieldset><legend>Данные для публикации</legend><div class="form-grid">
+          <label>Модель *<input name="chip" required maxlength="160" /></label><label>Производитель *<input name="manufacturer" required maxlength="160" /></label><label>Тип<select name="type">{TYPES.map(type => <option>{type}</option>)}</select></label><label>Корпус<input name="package" maxlength="160" /></label>
+          <label>Устройство<input name="device" maxlength="160" /></label><label>Плата<input name="board" maxlength="160" /></label><label>Программатор<input name="programmer" maxlength="160" /></label><label>Профиль<input name="profile" maxlength="160" /></label>
+          <label>Происхождение<select name="origin"><option value="unknown">Неизвестно</option><option value="known">Известно точно</option><option value="uncertain">Предположение</option></select></label>
+        </div><label>Все надписи на корпусе *<textarea name="label" required maxlength="1000" rows="3"></textarea></label><label>Описание<textarea name="description" maxlength="8000" rows="4"></textarea></label><label>Публичные заметки<textarea name="notes" maxlength="8000" rows="3"></textarea></label></fieldset>
+        <fieldset><legend>Строки для поиска</legend><p>Отметьте только содержательные строки. Показаны первые 300 кандидатов длиной до 160 символов; для полного просмотра скачайте дамп. Точное смещение и совпадение с файлом проверяются перед публикацией.</p><div id="string-candidates" class="string-candidates"></div><label>Дополнительные фрагменты (JSON)<textarea name="extraStrings" rows="3" placeholder='[{"offset": 123, "text": "VERSION 1.0"}]'>[]</textarea></label></fieldset>
+        <label class="check-label"><input name="markingsConfirmed" type="checkbox" required /><span>Фото соответствует файлу; все надписи прочитаны или уточнены у отправителя.</span></label><label class="check-label"><input name="stringsReviewed" type="checkbox" required /><span>Строки просмотрены, случайные символы не включены.</span></label>
+        <button class="button" type="submit">Одобрить и опубликовать</button>
+      </form>
+      <form id="reject-form" class="archive-form"><label>Причина отклонения<textarea name="reason" required maxlength="2000" rows="2"></textarea></label><button class="button secondary-button" type="submit">Отклонить заявку</button></form>
+      <p id="review-result"></p></section>
+    </div>
+  </section>
+  <script src="../scripts/moderation.ts"></script>
+</Layout>

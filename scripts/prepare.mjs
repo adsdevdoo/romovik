@@ -4,7 +4,11 @@ import { ROOT, loadCatalog, verifyAssets, assetPath } from '../src/lib/catalog.m
 
 const records = await loadCatalog();
 await verifyAssets(ROOT, records);
-if (!process.argv.includes('--check')) {
+// Generated static dumps must not shadow the database-backed /dumps routes.
+const generated = path.resolve(ROOT, 'public/dumps');
+if (path.relative(ROOT, generated) !== path.join('public', 'dumps')) throw new Error('Неверный каталог генерации.');
+if (!process.argv.includes('--check')) await rm(generated, { recursive: true, force: true });
+if (process.argv.includes('--static-export')) {
   const output = path.resolve(ROOT, 'public/dumps');
   if (path.relative(ROOT, output) !== path.join('public', 'dumps')) throw new Error('Неверный каталог генерации.');
   await rm(output, { recursive: true, force: true });

@@ -1,0 +1,43 @@
+{
+  "sequence": 11,
+  "id": "m27c4001-15f1-v88al-9318c",
+  "chip": "M27C4001-15F1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-32, керамический корпус с окном",
+  "label": "M27C4001 / -15F1 / V88AL / 9318C / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4001-15F1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4001 @DIP32",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4001@DIP32-2.BIN",
+    "size": 524288,
+    "sha256": "e05f00a774f8795c74fcc0b0b611d9b002233a75f73e679172d2c710616c2055"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4001-15F1 — фотография 1",
+      "size": 1614180,
+      "sha256": "c04edc49ebf6d4d0872b7898a60e4e1436331dee0ee7913c23e4ecdba71f7b05"
+    }
+  ],
+  "strings": [
+    { "offset": 294497, "encoding": "ASCII", "text": "#ifdef NEFA_TOUCH" },
+    { "offset": 369514, "encoding": "ASCII", "text": "* Jupiter Race -> Spielname" },
+    { "offset": 369588, "encoding": "ASCII", "text": "* kein AMATIC-Schriftzug sichtbar" },
+    { "offset": 452698, "encoding": "ASCII", "text": "(c) by G.Bammer" }
+  ],
+  "stringsReviewed": true
+}

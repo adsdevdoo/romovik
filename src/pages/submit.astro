@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { TYPES } from '../lib/catalog.mjs';
+---
+<Layout title="Прислать дамп ПЗУ — ROMовик" description="Поделитесь дампом ПЗУ, фотографией микросхемы и историей устройства. Перед публикацией каждую заявку проверяет модератор.">
+  <section class="page shell form-page">
+    <p class="eyebrow">Пополнить архив</p><h1>Сохраните ещё<br />одну историю.</h1>
+    <p class="form-intro">Пришлите исходный дамп и фото микросхемы. Если не знаете, из какого устройства она взята, оставьте описание пустым. Мы проверим заявку перед публикацией.</p>
+    <form id="submit-dump" class="archive-form">
+      <fieldset><legend>Микросхема</legend><div class="form-grid">
+        <label>Модель микросхемы *<input name="chip" required maxlength="160" placeholder="Например, M27C256B-15F1" /></label>
+        <label>Производитель<input name="manufacturer" maxlength="160" placeholder="Например, STMicroelectronics" /></label>
+        <label>Тип памяти<select name="type">{TYPES.map(type => <option>{type}</option>)}</select></label>
+        <label>Корпус<input name="package" maxlength="160" placeholder="Например, DIP-28" /></label>
+      </div><label>Все надписи на корпусе<textarea name="label" maxlength="1000" rows="3" placeholder="Перепишите модель, суффикс и коды с фотографии"></textarea></label></fieldset>
+      <fieldset><legend>Дамп и фотографии</legend>
+        <label class="file-field">Исходный дамп .BIN *<input name="dump" type="file" accept=".bin" required /><span>Один файл, до 16 МиБ. Сохраним его без изменений.</span></label>
+        <label class="file-field">Фото микросхемы *<input name="photos" type="file" accept="image/png,image/jpeg" multiple required /><span>1–3 фото PNG или JPEG, каждое до 8 МиБ и 16 мегапикселей. Снимите маркировку крупно.</span></label>
+      </fieldset>
+      <fieldset><legend>Что о ней известно</legend><div class="form-grid">
+        <label>Устройство<input name="device" maxlength="160" /></label><label>Плата<input name="board" maxlength="160" /></label>
+        <label>Происхождение<select name="origin"><option value="unknown">Неизвестно</option><option value="known">Известно точно</option><option value="uncertain">Есть предположение</option></select></label>
+        <label>Программатор<input name="programmer" maxlength="160" placeholder="Например, XGecu T56" /></label>
+        <label>Профиль чтения<input name="profile" maxlength="160" /></label>
+      </div><label>Описание<textarea name="description" maxlength="8000" rows="4" placeholder="Откуда микросхема, что сохранилось от устройства, особенности чтения…"></textarea></label>
+      <label>Контакт для уточнений<input name="contact" maxlength="300" placeholder="Email или Telegram — необязательно" /><span>Виден только модератору, в каталоге не публикуется.</span></label></fieldset>
+      <div class="honeypot" aria-hidden="true"><label>Сайт<input name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <label class="check-label"><input type="checkbox" name="consent" value="yes" required /><span>Отправляю дамп и фотографии для публикации в открытом архиве. Понимаю, что после одобрения они будут доступны для скачивания.</span></label>
+      <button class="button" type="submit">Отправить на модерацию</button><p id="submit-status" role="status" aria-live="polite"></p>
+    </form>
+    <div id="submission-success" class="success-box" hidden><h2>Спасибо! Дамп получен.</h2><p>Заявка в очереди на проверку. Файлы станут доступны в каталоге после одобрения.</p><p id="submission-number" class="mono break-all"></p><a class="button" href="/submit/">Прислать ещё один</a><a class="text-link" href="/#catalog">Вернуться к каталогу</a></div>
+  </section>
+  <script>
+    const form = document.querySelector<HTMLFormElement>('#submit-dump')!;
+    form.addEventListener('submit', async event => {
+      event.preventDefault(); const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      const status = document.querySelector('#submit-status')!; status.textContent = '';
+      const data = new FormData(form); const photos = data.getAll('photos') as File[]; const dump = data.get('dump') as File;
+      if (dump.size > 16 * 1024 * 1024 || !dump.size || photos.length > 3 || photos.some(p => !p.size || p.size > 8 * 1024 * 1024)) { status.textContent = 'Проверьте размер файлов: дамп до 16 МиБ, 1–3 фото до 8 МиБ каждое.'; return; }
+      button.disabled = true; button.textContent = 'Отправляем файлы…';
+      try {
+        const response = await fetch('/api/submissions', {method: 'POST', body: data});
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Не удалось отправить. Попробуйте позже.');
+        form.hidden = true; document.querySelector<HTMLElement>('#submission-success')!.hidden = false;
+        document.querySelector('#submission-number')!.textContent = `Номер заявки: ${result.id}`;
+        document.querySelector('#submission-success')!.scrollIntoView({behavior: 'smooth', block: 'center'});
+      } catch (error) { status.textContent = error instanceof Error ? error.message : 'Ошибка отправки.'; }
+      finally { button.disabled = false; button.textContent = 'Отправить на модерацию'; }
+    });
+  </script>
+</Layout>

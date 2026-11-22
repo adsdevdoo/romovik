@@ -1,0 +1,42 @@
+{
+  "sequence": 23,
+  "id": "m27c4002-45xf1-b880l-0140l",
+  "chip": "M27C4002-45XF1",
+  "manufacturer": "STMicroelectronics",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "M27C4002 / -45XF1 / B880L / 0140L / SINGAPORE",
+  "description": "Считано с STMicroelectronics M27C4002-45XF1 на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "M27C4002 @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "M27C4002@DIP40-2.BIN",
+    "size": 524288,
+    "sha256": "119e0773ba1ba7ba8685af4c707fce9bbca127d8eb3feae0c49efe951f8d8821"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "M27C4002-45XF1 — фотография 1",
+      "size": 1520459,
+      "sha256": "c017ea12082b3f25a67b1940b0c34f2d8e24c1d5523de3e12cbc92a6cac5a8f1"
+    }
+  ],
+  "strings": [
+    { "offset": 524240, "encoding": "ASCII", "text": "PKWILD_V111.BIN" },
+    { "offset": 524259, "encoding": "ASCII", "text": "2004-05-18" },
+    { "offset": 524276, "encoding": "ASCII", "text": "09:28:34" }
+  ],
+  "stringsReviewed": true
+}

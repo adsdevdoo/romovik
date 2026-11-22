@@ -1,5 +1,19 @@
 [
   {
+    "id": "tms27c210",
+    "title": "TMS27C210",
+    "publisher": "Texas Instruments",
+    "manufacturers": ["Texas Instruments"],
+    "models": ["TMS27C210-200JL"],
+    "revision": "Май 1987, редакция июня 1988 (Advance Information)",
+    "file": "tms27c210-f3a9b3207398.pdf",
+    "size": 302069,
+    "sha256": "f3a9b3207398a9fd6a68af02be9886a8d2f433b8a085b5ad813a2c7e37a89ebd",
+    "pages": 12,
+    "sourceUrl": "https://datasheet.datasheetarchive.com/originals/scans/Scans-067/DSA2IH00213487.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
     "id": "m27c4002",
     "title": "M27C4002",
     "publisher": "STMicroelectronics",

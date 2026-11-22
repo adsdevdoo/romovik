@@ -1,0 +1,50 @@
+{
+  "sequence": 26,
+  "id": "tms27c210-200jl-lap8926",
+  "chip": "TMS27C210-200JL",
+  "manufacturer": "Texas Instruments",
+  "type": "EPROM",
+  "package": "DIP-40, керамический корпус с окном",
+  "label": "TMS / 27C210-200JL / LAP8926",
+  "description": "Считано с Texas Instruments TMS27C210-200JL на программаторе XGecu T56. Происхождение устройства неизвестно.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "TMS27C210A @DIP40",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "По сообщению владельца, проверка Check ID не пройдена. На приложенном скриншоте Xgpro с профилем TMS27C210A @DIP40 получен Read Device ID: FF97 FF86. Маркировка на корпусе — TMS27C210-200JL.",
+  "tags": [],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "TMS27C210A@DIP40.BIN",
+    "size": 131072,
+    "sha256": "82458843e4e5311fcf995d5c929d7202df4a019b8834c088a4ef68f0a85a0f4d"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "TMS27C210-200JL — фотография 1",
+      "size": 1474355,
+      "sha256": "f878d338c4cdb51b211c0fe0b4eefb544099cbe980ca72fd928651e3cbc94899"
+    },
+    {
+      "file": "photo-2.png",
+      "alt": "Xgpro: профиль TMS27C210A @DIP40, Read Device ID: FF97 FF86",
+      "size": 25813,
+      "sha256": "dfbec05e775e31ca4d1ef9561c02d85886fdf9ad0fc229879f92885c463a4ed3"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 43584,
+      "encoding": "ASCII",
+      "text": "MNOVI61 OBJ"
+    }
+  ],
+  "stringsReviewed": true
+}

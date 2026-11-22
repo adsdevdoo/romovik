@@ -25,7 +25,8 @@
   "dump": {
     "file": "dump.bin",
     "size": 32768,
-    "sha256": "777d0d803bc0b63bfc410a55ff2e39118214dcb005e226c6b13b993887be025f"
+    "sha256": "777d0d803bc0b63bfc410a55ff2e39118214dcb005e226c6b13b993887be025f",
+    "originalFilename": "NMG27C256Q 25@DIP28.BIN"
   },
   "photos": [
     {

@@ -23,7 +23,8 @@
   "dump": {
     "file": "dump.bin",
     "size": 32768,
-    "sha256": "eb879ad4a1f399893c84ab660cbc53ac9917eaf1c299cca2fbafa084b036ab12"
+    "sha256": "eb879ad4a1f399893c84ab660cbc53ac9917eaf1c299cca2fbafa084b036ab12",
+    "originalFilename": "M27C256B@DIP28.BIN"
   },
   "photos": [
     {

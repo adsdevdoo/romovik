@@ -1,0 +1,71 @@
+{
+  "id": "tms27c256-1f6333c7",
+  "chip": "TMS27C256",
+  "manufacturer": "Texas Instruments",
+  "type": "EPROM",
+  "package": "DIP-28, керамический корпус с окном",
+  "label": "Полная маркировка на фотографии неразборчива",
+  "description": "Второй экземпляр, переданный как TMS27C256@DIP28-2.BIN. Модель и производитель семейства Texas Instruments указаны по названию выбранного профиля в имени файла; полная маркировка на тёмной фотографии неразборчива. Устройство и плата происхождения неизвестны.",
+  "device": "",
+  "board": "",
+  "origin": "unknown",
+  "programmer": "T56",
+  "profile": "TMS27C256 @DIP28",
+  "dateAdded": "2026-11-22",
+  "readDate": null,
+  "readVerification": "not-recorded",
+  "readCount": null,
+  "deviceTest": "not-tested",
+  "notes": "В дампе есть MULTICLUB 750 RUSSIA, MULTI    CLUB 750 и M750RU07. Содержимое отличается от TMS27C256@DIP28.BIN; одинаковая текстовая находка не означает совпадение файлов. Владелец уточнил, что тёмная фотография относится к этому экземпляру. Скриншот ID 97 04 был предоставлен с предыдущим дампом и к этому экземпляру не относится. Повторные чтения и работа в устройстве не подтверждены.",
+  "tags": [
+    "MULTICLUB 750 RUSSIA",
+    "M750RU07"
+  ],
+  "dump": {
+    "file": "dump.bin",
+    "originalFilename": "TMS27C256@DIP28-2.BIN",
+    "size": 32768,
+    "sha256": "1f6333c7f20cfe828340183acfbc6b010574277bd4471ea13417565bce30d043"
+  },
+  "photos": [
+    {
+      "file": "photo-1.png",
+      "alt": "Второй TMS27C256 в T56 — фотография к файлу TMS27C256@DIP28-2.BIN",
+      "size": 681245,
+      "sha256": "ef9a8defc61ef49b754a725a9a2d0a41ed6090576c8acc3ab7c215f772aec2e4"
+    }
+  ],
+  "strings": [
+    {
+      "offset": 0,
+      "encoding": "ASCII",
+      "text": "MULTICLUB 750 RUSSIA"
+    },
+    {
+      "offset": 20482,
+      "encoding": "ASCII",
+      "text": "MULTI    CLUB 750"
+    },
+    {
+      "offset": 20501,
+      "encoding": "ASCII",
+      "text": "M750RU07"
+    },
+    {
+      "offset": 21916,
+      "encoding": "ASCII",
+      "text": "SENSORS"
+    },
+    {
+      "offset": 22250,
+      "encoding": "ASCII",
+      "text": "FIND"
+    },
+    {
+      "offset": 22260,
+      "encoding": "ASCII",
+      "text": "HIGHEST"
+    }
+  ],
+  "stringsReviewed": true
+}

@@ -29,6 +29,8 @@ npm run preview
 
 Владелец передаёт помощнику файл, модель, фото и известное описание. Админка не нужна. Пример команды (в PowerShell используйте `npm.cmd`, поскольку `npm.ps1` может поглощать параметры):
 
+Постоянный порядок обработки присланных файлов и публикации — [AGENTS.md](AGENTS.md). Исходное имя сохраняется в `dump.originalFilename` без локального пути, показывается в карточке и участвует в поиске; файлы с суффиксами `-2`, `-3` связываются с фото отдельно.
+
 ```sh
 npm run add-dump -- --file /path/to/read.bin --id unique-chip-id --chip NMC27C256Q-25 --manufacturer "National Semiconductor" --type EPROM --photo /path/to/photo.png
 ```

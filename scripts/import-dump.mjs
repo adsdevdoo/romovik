@@ -20,7 +20,7 @@ export async function importDump(options, root = ROOT) {
     dateAdded: options.date ?? new Date().toISOString().slice(0, 10), readDate: null,
     readVerification: options.verify ? 'matching' : 'not-recorded', readCount: options.verify ? 2 : null,
     deviceTest: 'not-tested', notes: '', tags: [],
-    dump: { file: `dump${/^\.[a-z0-9]{1,8}$/.test(ext) ? ext : '.bin'}`, size: bytes.length, sha256: digest },
+    dump: { file: `dump${/^\.[a-z0-9]{1,8}$/.test(ext) ? ext : '.bin'}`, originalFilename: path.basename(options.file), size: bytes.length, sha256: digest },
     photos: (options.photos ?? []).map((file, i) => ({ file: `photo-${i + 1}${path.extname(file).toLowerCase()}`, alt: `${options.chip} — фотография ${i + 1}`, size: photoBytes[i].length, sha256: sha256(photoBytes[i]) })),
   });
   if (existing.some(item => item.id === record.id)) throw new Error(`Запись ${record.id} уже существует.`);

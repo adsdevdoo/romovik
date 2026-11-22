@@ -19,6 +19,7 @@ const structuredData = { '@context': 'https://schema.org', '@type': 'CreativeWor
       <section class="info-panel" aria-labelledby="file-heading">
         <h2 id="file-heading">Микросхема и дамп</h2>
         <dl class="data-list">
+          {record.dump.originalFilename && <div><dt>Исходный файл</dt><dd class="mono break-all">{record.dump.originalFilename}</dd></div>}
           <div><dt>Производитель</dt><dd>{record.manufacturer || 'Не указан'}</dd></div><div><dt>Маркировка</dt><dd class="mono">{record.label || record.chip}</dd></div><div><dt>Тип памяти</dt><dd>{record.type}</dd></div><div><dt>Корпус</dt><dd>{record.package || 'Не указан'}</dd></div><div><dt>Размер файла</dt><dd>{record.dump.size.toLocaleString('ru-RU')} байт ({formatSize(record.dump.size)})</dd></div><div><dt>Программатор</dt><dd>{record.programmer || 'Не указан'}</dd></div>{record.profile && <div><dt>Профиль чтения</dt><dd>{record.profile}</dd></div>}<div><dt>Происхождение</dt><dd>{ORIGINS[record.origin]}</dd></div>{record.board && <div><dt>Плата</dt><dd>{record.board}</dd></div>}
         </dl>
         <a class="button w-full" href={assetUrl(record)} download={`${record.id}.${record.dump.file.split('.').at(-1)}`}>Скачать дамп · {formatSize(record.dump.size)}</a>

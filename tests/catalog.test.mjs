@@ -21,6 +21,8 @@ test('import keeps bytes unchanged and leaves origin and device test unconfirmed
   const { record } = await importDump(f.options, f.root);
   assert.deepEqual(await readFile(path.join(f.root, 'archive', record.id, record.dump.file)), f.bytes);
   assert.equal(record.dump.sha256, sha256(f.bytes));
+  assert.equal(record.dump.originalFilename, 'input.bin');
+  assert.match(searchText(record), /input\.bin/);
   assert.equal(record.origin, 'unknown'); assert.equal(record.deviceTest, 'not-tested'); assert.equal(record.readVerification, 'not-recorded');
   await verifyAssets(f.root, await loadCatalog(f.root));
   await assert.rejects(importDump(f.options, f.root), /уже существует/);
@@ -51,6 +53,7 @@ test('path traversal and impossible dates are rejected before writing', async t 
   await assert.rejects(importDump({ ...f.options, date: '2026-02-30' }, f.root), /Дата/);
   const { record } = await importDump(f.options, f.root);
   assert.throws(() => validateRecord({ ...record, dump: { ...record.dump, file: '../secret.bin' } }), /файла/);
+  assert.throws(() => validateRecord({ ...record, dump: { ...record.dump, originalFilename: 'C:/private/input.bin' } }), /originalFilename/);
   assert.equal(isDate('2024-02-29'), true);
 });
 test('photo bytes are included in integrity verification', async t => {

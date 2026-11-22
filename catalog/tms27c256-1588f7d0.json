@@ -1,11 +1,11 @@
 {
   "id": "tms27c256-1588f7d0",
-  "chip": "TMS27C256",
+  "chip": "TMS27C256-25JL",
   "manufacturer": "Texas Instruments",
   "type": "EPROM",
   "package": "DIP-28, керамический корпус с окном",
-  "label": "Полная маркировка на фотографии неразборчива",
-  "description": "ПЗУ Texas Instruments семейства TMS27C256. На скриншоте Xgpro выбран профиль TMS27C256 @DIP28, объём 32768 байт, дважды прочитан Device ID: 97 04. Полный суффикс модели и код партии на фотографии неразборчивы. Устройство и плата происхождения не указаны.",
+  "label": "TMS / 27C256-25JL; код партии неразборчив",
+  "description": "ПЗУ Texas Instruments TMS27C256-25JL. Модель и логотип TI видны на исправленной фотографии, предоставленной владельцем. На скриншоте Xgpro выбран профиль TMS27C256 @DIP28, объём 32768 байт, дважды прочитан Device ID: 97 04. Устройство и плата происхождения не указаны.",
   "device": "",
   "board": "",
   "origin": "unknown",
@@ -23,14 +23,15 @@
   "dump": {
     "file": "dump.bin",
     "size": 32768,
-    "sha256": "1588f7d0384553673c6db32e49386d3008dc4952141d59d2552eac4948bd675a"
+    "sha256": "1588f7d0384553673c6db32e49386d3008dc4952141d59d2552eac4948bd675a",
+    "originalFilename": "TMS27C256@DIP28.BIN"
   },
   "photos": [
     {
-      "file": "photo-1.png",
-      "alt": "Микросхема TMS27C256 в T56; полная маркировка на корпусе слабо различима",
-      "size": 681245,
-      "sha256": "ef9a8defc61ef49b754a725a9a2d0a41ed6090576c8acc3ab7c215f772aec2e4"
+      "file": "photo-chip-corrected.png",
+      "alt": "Texas Instruments TMS27C256-25JL в T56 — исправленная фотография к файлу TMS27C256@DIP28.BIN",
+      "size": 778279,
+      "sha256": "588eb4939a5f66fbce8ae6613cf6acc0f200784290229aa98424f132013e7e5e"
     },
     {
       "file": "photo-2.png",

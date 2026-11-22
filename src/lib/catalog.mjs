@@ -35,6 +35,7 @@ export function validateRecord(record) {
   if (record.readCount !== null && (!Number.isSafeInteger(record.readCount) || record.readCount < 1)) fail('readCount: положительное целое или null.');
   if (record.readVerification === 'matching' && !(record.readCount >= 2)) fail('Для совпавших чтений нужны минимум два чтения.');
   if (!record.dump || !safeName(record.dump.file) || !Number.isSafeInteger(record.dump.size) || record.dump.size < 1 || !/^[a-f0-9]{64}$/.test(record.dump.sha256 ?? '')) fail('Некорректные данные файла дампа.');
+  if (record.dump.originalFilename !== undefined && (typeof record.dump.originalFilename !== 'string' || !record.dump.originalFilename.trim() || /[\\/:\x00-\x1f\x7f]/.test(record.dump.originalFilename))) fail('originalFilename: только исходное имя файла, без пути.');
   if (!Array.isArray(record.tags) || record.tags.some(tag => typeof tag !== 'string' || !tag.trim())) fail('tags: массив непустых строк.');
   record.strings ??= [];
   record.stringsReviewed ??= false;
@@ -86,4 +87,4 @@ export async function verifyAssets(root, records) {
   }
 }
 export const assetUrl = (record, file = record.dump.file) => `/dumps/${record.id}/${encodeURIComponent(file)}`;
-export const searchText = record => normalizeSearch([record.chip, record.manufacturer, record.label, record.device, record.board, record.description, record.notes, record.dump.sha256, ...record.tags, ...(record.strings ?? []).map(item => item.text)].join(' '));
+export const searchText = record => normalizeSearch([record.chip, record.manufacturer, record.label, record.device, record.board, record.description, record.notes, record.dump.originalFilename ?? '', record.dump.sha256, ...record.tags, ...(record.strings ?? []).map(item => item.text)].join(' '));

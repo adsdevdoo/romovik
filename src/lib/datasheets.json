@@ -1,0 +1,170 @@
+[
+  {
+    "id": "nmc27c256",
+    "title": "NMC27C256",
+    "publisher": "National Semiconductor",
+    "manufacturers": [
+      "National Semiconductor"
+    ],
+    "models": [
+      "NMC27C256Q-25"
+    ],
+    "revision": "Memory Databook, стр. 1-67–1-75",
+    "file": "nmc27c256-abea155bceb4.pdf",
+    "size": 350558,
+    "sha256": "abea155bceb4f7d0f54d65d8163dbdabd931042bbc20306974923c446e489ffc",
+    "pages": 9,
+    "sourceUrl": "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-21/DSA-417727.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "am27c256",
+    "title": "Am27C256",
+    "publisher": "AMD",
+    "manufacturers": [
+      "AMD",
+      "Advanced Micro Devices",
+      "AMD (Advanced Micro Devices)"
+    ],
+    "models": [
+      "AM27C256-205DC"
+    ],
+    "revision": "08007 Rev. G, июль 1993",
+    "file": "am27c256-a71a8a57c44b.pdf",
+    "size": 460539,
+    "sha256": "a71a8a57c44b05cd21cec2401cbc7f0e41e432bb4797ca7cccdaa1a18c9c8f8b",
+    "pages": 13,
+    "sourceUrl": "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets-4/DSA-63816.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "m27c256b",
+    "title": "M27C256B",
+    "publisher": "STMicroelectronics",
+    "manufacturers": [
+      "STMicroelectronics"
+    ],
+    "models": [
+      "M27C256B-12F1",
+      "M27C256B-15F1"
+    ],
+    "revision": "Август 2002",
+    "file": "m27c256b-aae54bf01e7f.pdf",
+    "size": 154133,
+    "sha256": "aae54bf01e7f27102fc16312fa1b63edace97c89f5bea57b62288b2298aa5882",
+    "pages": 16,
+    "sourceUrl": "https://datasheet.datasheetarchive.com/originals/dk/DKDS-5/94655.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "am27c010",
+    "title": "Am27C010",
+    "publisher": "AMD",
+    "manufacturers": [
+      "AMD",
+      "Advanced Micro Devices",
+      "AMD (Advanced Micro Devices)"
+    ],
+    "models": [
+      "AM27C010-200DC"
+    ],
+    "revision": "10205 Rev. J, 2 июля 1999",
+    "file": "am27c010-cf014f9940bd.pdf",
+    "size": 101408,
+    "sha256": "cf014f9940bd893b15e0acb70346ed9d8cbb7846191d24f95eb37c77bcea7219",
+    "pages": 12,
+    "sourceUrl": "https://www.datasheetarchive.com/datasheet/Am27C010/Advanced-Micro-Devices?term=am27c010&version=1",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "tms27c256",
+    "title": "TMS27C256",
+    "publisher": "Texas Instruments",
+    "manufacturers": [
+      "Texas Instruments"
+    ],
+    "models": [
+      "TMS27C256",
+      "TMS27C256-25JL"
+    ],
+    "revision": "SMLS256H, ноябрь 1997",
+    "file": "tms27c256-296989271b90.pdf",
+    "size": 205977,
+    "sha256": "296989271b903a0df5aa340b830c040c6828bd1a1aa559e973585245cab05038",
+    "pages": 15,
+    "sourceUrl": "https://deramp.com/downloads/mfe_archive/050-Component%20Specifications/Texas%20Instruments/Memory%20Components/TI%20TMS27C256.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "tms27c512",
+    "title": "TMS27C512",
+    "publisher": "Texas Instruments",
+    "manufacturers": [
+      "Texas Instruments"
+    ],
+    "models": [
+      "TMS27C512-20JL"
+    ],
+    "revision": "SMLS512G, сентябрь 1997",
+    "file": "tms27c512-cad5ef8573f8.pdf",
+    "size": 192685,
+    "sha256": "cad5ef8573f8312a343a8675e3cac8ff34cf5b50473a5747b3007685949d6d04",
+    "pages": 14,
+    "sourceUrl": "https://www.eliptor.pl/pub/pdf/TI/TMS27C512.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "m27512",
+    "title": "M27512",
+    "publisher": "STMicroelectronics",
+    "manufacturers": [
+      "STMicroelectronics"
+    ],
+    "models": [
+      "M27512F1"
+    ],
+    "revision": "Ноябрь 2000",
+    "file": "m27512-594bc1121cbd.pdf",
+    "size": 92439,
+    "sha256": "594bc1121cbd0cc4e2cba6beb2a51d33dc0bc8daa8cf15a8a09eccb1d7ea410b",
+    "pages": 11,
+    "sourceUrl": "https://www.thierry-lequeu.fr/data/M27512.pdf",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "m27c4001",
+    "title": "M27C4001",
+    "publisher": "STMicroelectronics",
+    "manufacturers": [
+      "STMicroelectronics"
+    ],
+    "models": [
+      "M27C4001-15F1"
+    ],
+    "revision": "Rev. 4, март 2006",
+    "file": "m27c4001-a197b1dce87a.pdf",
+    "size": 172996,
+    "sha256": "a197b1dce87a4ceb792330fbdcbad60be947164bc131992c8e3bb64c4946ede2",
+    "pages": 24,
+    "sourceUrl": "https://www.datasheetarchive.com/datasheet/M27C4001/STMicroelectronics?term=m27c4001&version=2",
+    "retrievedAt": "2026-11-22"
+  },
+  {
+    "id": "m27c160",
+    "title": "M27C160",
+    "publisher": "STMicroelectronics",
+    "manufacturers": [
+      "STMicroelectronics"
+    ],
+    "models": [
+      "M27C160-100F1"
+    ],
+    "revision": "Февраль 1999",
+    "file": "m27c160-66c9b48d4b09.pdf",
+    "size": 173364,
+    "sha256": "66c9b48d4b097333b2b18cb64225108bec002473ecf98c22256c1ac518b4f85e",
+    "pages": 16,
+    "sourceUrl": "https://datasheet.octopart.com/M27C160-100F1-STMicroelectronics-datasheet-10736240.pdf",
+    "retrievedAt": "2026-11-22"
+  }
+]

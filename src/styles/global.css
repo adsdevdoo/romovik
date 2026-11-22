@@ -147,6 +147,10 @@ h2 { margin:0; font-size:29px; font-weight:600; letter-spacing:-.8px; line-heigh
 .hash-title { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:12px; color:var(--muted); margin-bottom:9px; }
 .hash-block code { font-size:12px; overflow-wrap:anywhere; display:block; }
 .download-note { font-size:12px; color:var(--muted); margin:9px 0 0; }
+.datasheet-block { margin-top:24px; padding-top:20px; border-top:1px solid var(--line); }
+.datasheet-block h3 { margin:0 0 8px; font-size:17px; }
+.datasheet-block p { color:var(--muted); font-size:13px; line-height:1.6; margin:0 0 12px; }
+.datasheet-source { display:block; width:fit-content; margin-top:12px; font-size:12px; }
 .status-list { display:grid; gap:8px; font-size:13px; margin-top:25px; color:var(--muted); }
 .status-list p { margin:0; padding-left:12px; border-left:2px solid #bdc9b5; }
 .prose { max-width:760px; }

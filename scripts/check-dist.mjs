@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { stat } from 'node:fs/promises';
 import { loadCatalog, sha256 } from '../src/lib/catalog.mjs';
+import { datasheets, getDatasheet, datasheetUrl } from '../src/lib/datasheets.mjs';
 const base = process.env.CHECK_URL || 'http://localhost:4321';
 await stat('dist/server/entry.mjs');
 const records = await loadCatalog();
@@ -32,7 +33,18 @@ for (const record of records) {
     const bytes = Buffer.from(await response.arrayBuffer()); assert.equal(bytes.length, asset.size); assert.equal(sha256(bytes), asset.sha256); assets++;
   }
   const html = await (await fetch(`${base}/rom/${record.id}/`)).text();
+  const document = getDatasheet(record);
+  assert.ok(document, `${record.id}: missing reviewed datasheet`);
+  assert.ok(html.includes(`href="${datasheetUrl(document)}"`), `${record.id}: missing datasheet link`);
   for (const item of record.strings) assert.ok(html.includes(item.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')));
 }
+for (const document of datasheets) {
+  const response = await fetch(`${base}${datasheetUrl(document)}`);
+  assert.equal(response.status, 200, document.file);
+  assert.match(response.headers.get('content-type') ?? '', /^application\/pdf\b/);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  assert.equal(bytes.length, document.size, document.file);
+  assert.equal(sha256(bytes), document.sha256, document.file);
+}
 assert.match(await (await fetch(`${base}/robots.txt`)).text(), /Allow: \/[\s\S]+Sitemap: https:/);
-console.log(`Verified ${paths.length} SSR pages, ${links.size} links, ${records.length} records, ${assets} byte-identical assets, search order, sitemap, 404, private moderation.`);
+console.log(`Verified ${paths.length} SSR pages, ${links.size} links, ${records.length} records, ${assets} byte-identical assets, ${datasheets.length} unique PDF datasheets, search order, sitemap, 404, private moderation.`);

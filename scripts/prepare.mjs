@@ -1,9 +1,11 @@
 import { mkdir, rm, cp, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { ROOT, loadCatalog, verifyAssets, assetPath } from '../src/lib/catalog.mjs';
+import { verifyDatasheets } from './verify-datasheets.mjs';
 
 const records = await loadCatalog();
 await verifyAssets(ROOT, records);
+const documents = await verifyDatasheets(ROOT);
 // Generated static dumps must not shadow the database-backed /dumps routes.
 const generated = path.resolve(ROOT, 'public/dumps');
 if (path.relative(ROOT, generated) !== path.join('public', 'dumps')) throw new Error('Неверный каталог генерации.');
@@ -20,4 +22,4 @@ if (process.argv.includes('--static-export')) {
   }
   await writeFile(path.join(output, 'catalog.json'), `${JSON.stringify(records, null, 2)}\n`);
 }
-console.log(`Каталог проверен: ${records.length} записей. Размеры, SHA-256 и вложения совпадают.`);
+console.log(`Каталог проверен: ${records.length} записей, ${documents} уникальных даташитов. Размеры, SHA-256 и вложения совпадают.`);
